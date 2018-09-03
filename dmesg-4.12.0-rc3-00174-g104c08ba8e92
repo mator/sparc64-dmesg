@@ -1,0 +1,758 @@
+[    0.000000] PROMLIB: Sun IEEE Boot Prom 'OBP 4.38.8 2017/02/22 13:51'
+[    0.000000] PROMLIB: Root node compatible: sun4v
+[    0.000000] Linux version 4.12.0-rc3-00174-g104c08ba8e92 (mator@ttip) (gcc version 6.3.0 20170516 (Debian 6.3.0-18) ) #337 SMP Sat Jun 3 19:13:14 MSK 2017
+[    0.000000] bootconsole [earlyprom0] enabled
+[    0.000000] ARCH: SUN4V
+[    0.000000] Ethernet address: 00:14:4f:fa:06:f2
+[    0.000000] MM: PAGE_OFFSET is 0xfff8000000000000 (max_phys_bits == 47)
+[    0.000000] MM: VMALLOC [0x0000000100000000 --> 0x0006000000000000]
+[    0.000000] MM: VMEMMAP [0x0006000000000000 --> 0x000c000000000000]
+[    0.000000] Kernel: Using 5 locked TLB entries for main kernel image.
+[    0.000000] Remapping the kernel... 
+[    0.000000] done.
+[    0.000000] kmemleak: Kernel memory leak detector disabled
+[    0.000000] OF stdout device is: /virtual-devices@100/console@1
+[    0.000000] PROM: Built device tree with 85375 bytes of memory.
+[    0.000000] MDESC: Size is 35904 bytes.
+[    0.000000] PLATFORM: banner-name [SPARC T5-2]
+[    0.000000] PLATFORM: name [ORCL,SPARC-T5-2]
+[    0.000000] PLATFORM: hostid [84fa06f2]
+[    0.000000] PLATFORM: serial# [0035260e]
+[    0.000000] PLATFORM: stick-frequency [3b9aca00]
+[    0.000000] PLATFORM: mac-address [144ffa06f2]
+[    0.000000] PLATFORM: watchdog-resolution [1000 ms]
+[    0.000000] PLATFORM: watchdog-max-timeout [31536000000 ms]
+[    0.000000] PLATFORM: max-cpus [1024]
+[    0.000000] Top of RAM: 0x40bf926000, Total RAM: 0x7ff34c000
+[    0.000000] Memory hole size: 232453MB
+[    0.000000] Allocated 40960 bytes for kernel page tables.
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000040400000-0x00000040bf925fff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040400000-0x000000007fe7ffff]
+[    0.000000]   node   0: [mem 0x000000007ff00000-0x000000007ff25fff]
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000077fffffff]
+[    0.000000]   node   0: [mem 0x0000002000000000-0x000000202fffffff]
+[    0.000000]   node   0: [mem 0x0000004030000000-0x00000040bf87ffff]
+[    0.000000]   node   0: [mem 0x00000040bf900000-0x00000040bf925fff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040400000-0x00000040bf925fff]
+[    0.000000] On node 0 totalpages: 4192678
+[    0.000000]   Normal zone: 36850 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 4192678 pages, LIFO batch:15
+[    0.000000] Booting Linux...
+[    0.000000] CPU CAPS: [flush,stbar,swap,muldiv,v9,blkinit,n2,mul32]
+[    0.000000] CPU CAPS: [div32,v8plus,popc,vis,vis2,ASIBlkInit,fmaf,vis3]
+[    0.000000] CPU CAPS: [hpc,ima,pause,cbcond,aes,des,kasumi,camellia]
+[    0.000000] CPU CAPS: [md5,sha1,sha256,sha512,mpmul,montmul,montsqr,crc32c]
+[    0.000000] percpu: Embedded 12 pages/cpu @fff80040bd000000 s56584 r8192 d33528 u131072
+[    0.000000] pcpu-alloc: s56584 r8192 d33528 u131072 alloc=1*4194304
+[    0.000000] pcpu-alloc: [0] 000 001 002 003 004 005 006 007 008 009 010 011 012 013 014 015 016 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 
+[    0.000000] pcpu-alloc: [0] 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 
+[    0.000000] pcpu-alloc: [0] 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 
+[    0.000000] pcpu-alloc: [0] 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 
+[    0.000000] pcpu-alloc: [0] 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 
+[    0.000000] pcpu-alloc: [0] 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 
+[    0.000000] pcpu-alloc: [0] 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 
+[    0.000000] pcpu-alloc: [0] 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 
+[    0.000000] SUN4V: Mondo queue sizes [cpu(131072) dev(16384) r(8192) nr(256)]
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 4155828
+[    0.000000] Kernel command line: BOOT_IMAGE=/vmlinuz-4.12.0-rc3-00174-g104c08ba8e92 root=/dev/vdiska2 ro zswap.enabled=1 noresume
+[    0.000000] log_buf_len individual max cpu contribution: 4096 bytes
+[    0.000000] log_buf_len total cpu_extra contributions: 1044480 bytes
+[    0.000000] log_buf_len min size: 131072 bytes
+[    0.000000] log_buf_len: 2097152 bytes
+[    0.000000] early log buf free: 126128(96%)
+[    0.000000] PID hash table entries: 4096 (order: 2, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 4194304 (order: 12, 33554432 bytes)
+[    0.000000] Inode-cache hash table entries: 2097152 (order: 11, 16777216 bytes)
+[    0.000000] Sorting __ex_table...
+[    0.000000] Memory: 33113232K/33541424K available (6565K kernel code, 854K rwdata, 1888K rodata, 592K init, 8872K bss, 428192K reserved, 0K cma-reserved)
+[    0.000000] ftrace: allocating 20192 entries in 40 pages
+[    0.000000] Running RCU self tests
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU lockdep checking is enabled.
+[    0.000000] NR_IRQS:2048 nr_irqs:2048 1
+[    0.000000] SUN4V: Using IRQ API major 3, cookie only virqs enabled
+[791023.086231] clocksource: stick: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[791023.086366] clocksource: mult[800000] shift[23]
+[791023.086414] clockevent: mult[80000000] shift[31]
+[791023.089303] Console: colour dummy device 80x25
+[791023.089362] console [tty0] enabled
+[791023.089426] bootconsole [earlyprom0] disabled
+[791023.089498] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+[791023.089538] ... MAX_LOCKDEP_SUBCLASSES:  8
+[791023.089562] ... MAX_LOCK_DEPTH:          48
+[791023.089587] ... MAX_LOCKDEP_KEYS:        8191
+[791023.089612] ... CLASSHASH_SIZE:          4096
+[791023.089637] ... MAX_LOCKDEP_ENTRIES:     16384
+[791023.089662] ... MAX_LOCKDEP_CHAINS:      32768
+[791023.089688] ... CHAINHASH_SIZE:          16384
+[791023.089713]  memory used by lock dependency info: 5855 kB
+[791023.089742]  per task-struct memory footprint: 1920 bytes
+[791023.089944] kmemleak: Early log buffer exceeded (24507), please increase DEBUG_KMEMLEAK_EARLY_LOG_SIZE
+[791023.290587] Calibrating delay using timer specific routine.. 2005.74 BogoMIPS (lpj=4011490)
+[791023.290638] pid_max: default: 262144 minimum: 2048
+[791023.291719] Security Framework initialized
+[791023.291748] Yama: becoming mindful.
+[791023.291810] AppArmor: AppArmor disabled by boot time parameter
+[791023.292308] Mount-cache hash table entries: 65536 (order: 6, 524288 bytes)
+[791023.292348] Mountpoint-cache hash table entries: 65536 (order: 6, 524288 bytes)
+[791023.315188] smp: Bringing up secondary CPUs ...
+[791023.381270] smp: Brought up 1 node, 32 CPUs
+[791023.388086] devtmpfs: initialized
+[791023.393603] Performance events: 
+[791023.393644] Testing NMI watchdog ... 
+[791023.473741] OK.
+[791023.473816] Supported PMU type is 'niagara5'
+[791023.475010] ldc.c:v1.1 (July 22, 2008)
+[791023.478279] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[791023.478366] futex hash table entries: 65536 (order: 10, 8388608 bytes)
+[791023.494413] NET: Registered protocol family 16
+[791023.504043] VIO: Adding device channel-devices
+[791023.504289] VIO: Adding device vnet-port-0-0
+[791023.504523] VIO: Adding device vnet-port-0-1
+[791023.504739] VIO: Adding device vnet-port-0-2
+[791023.504972] VIO: Adding device vdc-port-0-0
+[791023.505176] VIO: Adding device vdc-port-1-0
+[791023.505388] VIO: Adding device vdc-port-2-0
+[791023.505616] VIO: Adding device vdc-port-3-0
+[791023.505822] VIO: Adding device vlds-port-0-0
+[791023.506073] VIO: Adding device ds-0
+[791023.559720] HugeTLB registered 8 MB page size, pre-allocated 0 pages
+[791023.569196] vgaarb: loaded
+[791023.572190] SUN4V: Reboot data supported (maj=1,min=0).
+[791023.572407] ds.c:v1.0 (Jul 11, 2007)
+[791023.572740] ds-0: ds_conn_reset() from send_events
+[791023.573086] clocksource: Switched to clocksource stick
+[791023.709409] VFS: Disk quotas dquot_6.6.0
+[791023.709622] VFS: Dquot-cache hash table entries: 1024 (order 0, 8192 bytes)
+[791023.726544] NET: Registered protocol family 2
+[791023.730524] TCP established hash table entries: 262144 (order: 8, 2097152 bytes)
+[791023.731631] TCP bind hash table entries: 65536 (order: 9, 4194304 bytes)
+[791023.744091] TCP: Hash tables configured (established 262144 bind 65536)
+[791023.750060] UDP hash table entries: 16384 (order: 8, 2621440 bytes)
+[791023.757640] UDP-Lite hash table entries: 16384 (order: 8, 2621440 bytes)
+[791023.771676] NET: Registered protocol family 1
+[791023.771735] PCI: CLS 0 bytes, default 64
+[791023.772335] Unpacking initramfs...
+[791023.932348] Freeing initrd memory: 5536K
+[791023.968468] audit: initializing netlink subsys (disabled)
+[791023.968780] audit: type=2000 audit(0.755:1): state=initialized audit_enabled=0 res=1
+[791023.969823] workingset: timestamp_bits=46 max_order=22 bucket_order=0
+[791023.971239] zbud: loaded
+[791023.994315] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[791023.995672] io scheduler noop registered
+[791023.995702] io scheduler deadline registered
+[791023.996384] io scheduler cfq registered (default)
+[791023.996416] io scheduler mq-deadline registered
+[791023.996446] io scheduler kyber registered
+[791023.999914] f029b778: ttyS0 at I/O 0x0 (irq = 1, base_baud = 115200) is a SUN4V HCONS
+[791024.000465] console [ttyHV0] enabled
+[791024.003848] sunvdc.c:v1.2 (November 24, 2014)
+[791024.014295] sunvdc: Virtual Hard disk vdiska
+[791024.014331] sunvdc: vdiska: 20971520 sectors (10240 MB) protocol 1.2
+[791024.015306]  vdiska: vdiska1 vdiska2 vdiska3 vdiska4
+[791024.033226] sunvdc: Virtual Hard disk vdiskb
+[791024.033263] sunvdc: vdiskb: 104857600 sectors (51200 MB) protocol 1.2
+[791024.039800]  vdiskb: vdiskb1
+[791024.051373] sunvdc: Virtual Hard disk vdiskc
+[791024.051408] sunvdc: vdiskc: 41943040 sectors (20480 MB) protocol 1.2
+[791024.052078]  vdiskc: vdiskc1
+[791024.067676] sunvdc: Virtual CDROM vdiskd
+[791024.067723] sunvdc: vdiskd: 383208 sectors (187 MB) protocol 1.2
+[791024.068474]  vdiskd: vdiskd1 vdiskd2 vdiskd3 vdiskd4 vdiskd5 vdiskd6 vdiskd7
+[791024.073248] sunvnet: sunvnet 2.0 (February 3, 2017)
+[791024.075462] vnet_port vnet-port-0-0 eth0: Sun LDOM vnet 00:14:4f:f8:12:a3
+[791024.075984] sunvnet: eth0: PORT ( remote-mac 00:14:4f:fa:f3:f0 switch-port )
+[791024.076522] sunvnet: eth0: PORT ( remote-mac 00:14:4f:f8:e5:f3 )
+[791024.077080] sunvnet: eth0: PORT ( remote-mac 00:14:4f:fa:e6:35 )
+[791024.078111] mousedev: PS/2 mouse device common for all mice
+[791024.078984] rtc-sun4v rtc-sun4v: rtc core: registered sun4v as rtc0
+[791024.080264] device-mapper: uevent: version 1.0.3
+[791024.081265] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[791024.085063] NET: Registered protocol family 10
+[791024.095553] Segment Routing with IPv6
+[791024.095629] mip6: Mobile IPv6
+[791024.095670] NET: Registered protocol family 17
+[791024.095712] mpls_gso: MPLS GSO support
+[791024.096811] registered taskstats version 1
+[791024.100213] zswap: loaded using pool lzo/zbud
+[791024.101259] rtc-sun4v rtc-sun4v: setting system clock to 2017-06-03 16:26:08 UTC (1496507168)
+[791024.102369] This architecture does not have kernel memory protection.
+[791024.179386] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[791024.180247] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[791024.180365] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[791024.180464] random: systemd-udevd: uninitialized urandom read (16 bytes read)
+[791024.183277] random: udevadm: uninitialized urandom read (16 bytes read)
+[791024.183578] random: udevadm: uninitialized urandom read (16 bytes read)
+[791024.362573] random: udevadm: uninitialized urandom read (16 bytes read)
+[791024.362675] random: udevadm: uninitialized urandom read (16 bytes read)
+[791024.363422] random: udevadm: uninitialized urandom read (16 bytes read)
+[791024.363515] random: udevadm: uninitialized urandom read (16 bytes read)
+[791024.748462] crc32c_sparc64: Using sparc64 crc32c opcode optimized CRC32C implementation
+[791025.145243] random: fast init done
+[791025.155306] EXT4-fs (vdiska2): mounted filesystem with ordered data mode. Opts: (null)
+[791025.334298] ip_tables: (C) 2000-2006 Netfilter Core Team
+[791025.367600] systemd[1]: systemd 232 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+[791025.367951] systemd[1]: Detected architecture sparc64.
+[791025.374388] systemd[1]: Set hostname to <ttip>.
+[791025.648537] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[791025.649702] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[791025.650067] systemd[1]: Reached target Remote File Systems.
+[791025.650816] systemd[1]: Listening on Journal Socket.
+[791025.651503] systemd[1]: Listening on Journal Audit Socket.
+[791025.652112] systemd[1]: Listening on LVM2 metadata daemon socket.
+[791025.652607] systemd[1]: Listening on LVM2 poll daemon socket.
+[791025.759465] EXT4-fs (vdiska2): re-mounted. Opts: errors=remount-ro
+[791025.765553] nf_conntrack version 0.5.0 (65536 buckets, 262144 max)
+[791025.916605] systemd-journald[377]: Received request to flush runtime journal from PID 1
+[791026.441892] random: crng init done
+[791026.473748] sha1_sparc64: Using sparc64 sha1 opcode optimized SHA-1 implementation
+[791026.476952] sha256_sparc64: Using sparc64 sha256 opcode optimized SHA-256/SHA-224 implementation
+[791026.478567] n2rng v0.3 (Jan 7, 2017)
+[791026.478667] n2rng f029b0f4: Registered RNG HVAPI major 2 minor 0
+[791026.478752] n2rng f029b0f4: Found multi-unit-capable RNG, units: 2
+[791026.479379] n2rng f029b0f4: RNG ready
+[791026.479609] sha512_sparc64: Using sparc64 sha512 opcode optimized SHA-512/SHA-384 implementation
+[791026.481248] md5_sparc64: Using sparc64 md5 opcode optimized MD5 implementation
+[791026.483227] aes_sparc64: Using sparc64 aes opcodes optimized AES implementation
+[791026.489126] des_sparc64: Using sparc64 des opcodes optimized DES implementation
+[791026.502774] camellia_sparc64: Using sparc64 camellia opcodes optimized CAMELLIA implementation
+[791029.436498] Adding 425712k swap on /dev/vdiska4.  Priority:-1 extents:1 across:425712k FS
+[791029.808923] EXT4-fs (vdiska1): mounting ext3 file system using the ext4 subsystem
+[791029.853288] EXT4-fs (vdiska1): mounted filesystem with ordered data mode. Opts: (null)
+[791030.832072] crc32: CRC_LE_BITS = 64, CRC_BE BITS = 64
+[791030.832132] crc32: self tests passed, processed 225944 bytes in 294622 nsec
+[791030.832473] crc32c: CRC_LE_BITS = 64
+[791030.832509] crc32c: self tests passed, processed 225944 bytes in 137693 nsec
+[791030.848977] crc32_combine: 8373 self tests passed
+[791030.866170] crc32c_combine: 8373 self tests passed
+[791032.339834] tun: Universal TUN/TAP device driver, 1.6
+[791333.737326] SGI XFS with ACLs, security attributes, realtime, debug enabled
+[791333.769895] XFS (vdiskb1): Mounting V5 Filesystem
+[791337.121399] XFS (vdiskb1): Ending clean mount
+
+[793739.220988] ======================================================
+[793739.221014] WARNING: possible circular locking dependency detected
+[793739.221044] 4.12.0-rc3-00174-g104c08ba8e92 #337 Not tainted
+[793739.221067] ------------------------------------------------------
+[793739.221093] kworker/u512:1/48907 is trying to acquire lock:
+[793739.221116]  (&buf->lock){+.+...}, at: [<0000000000842708>] tty_buffer_flush+0x28/0xc0
+[793739.221180] 
+                but task is already holding lock:
+[793739.221205]  (&o_tty->termios_rwsem/1){++++..}, at: [<000000000083bf68>] isig+0x48/0xe0
+[793739.221254] 
+                which lock already depends on the new lock.
+
+[793739.221286] 
+                the existing dependency chain (in reverse order) is:
+[793739.221313] 
+                -> #2 (&o_tty->termios_rwsem/1){++++..}:
+[793739.221381]        down_read+0x40/0x80
+[793739.221413]        n_tty_write+0x44/0x4c0
+[793739.221448]        tty_write+0x268/0x2a0
+[793739.221483]        __vfs_write+0x24/0x140
+[793739.221514]        vfs_write+0x90/0x160
+[793739.221548]        SyS_write+0x38/0x80
+[793739.221587]        linux_sparc_syscall+0x34/0x44
+[793739.221614] 
+                -> #1 (&tty->atomic_write_lock){+.+.+.}:
+[793739.221678]        __mutex_lock+0x50/0x960
+[793739.221711]        mutex_lock_nested+0x1c/0x40
+[793739.221748]        tty_port_default_receive_buf+0x38/0x80
+[793739.221785]        flush_to_ldisc+0x90/0xe0
+[793739.221822]        process_one_work+0x3e4/0x7c0
+[793739.221856]        worker_thread+0x334/0x5c0
+[793739.221889]        kthread+0x118/0x140
+[793739.221922]        ret_from_fork+0x1c/0x2c
+[793739.221950]                  (null)
+[793739.221974] 
+                -> #0 (&buf->lock){+.+...}:
+[793739.222041]        lock_acquire+0x1c4/0x220
+[793739.222074]        __mutex_lock+0x50/0x960
+[793739.222107]        mutex_lock_nested+0x1c/0x40
+[793739.222142]        tty_buffer_flush+0x28/0xc0
+[793739.222173]        pty_flush_buffer+0x18/0x80
+[793739.222209]        tty_driver_flush_buffer+0x1c/0x40
+[793739.222245]        isig+0x88/0xe0
+[793739.222278]        n_tty_receive_signal_char+0x10/0x80
+[793739.222312]        n_tty_receive_char_special+0x84/0xba0
+[793739.222348]        n_tty_receive_buf_common+0x6c8/0xd00
+[793739.222383]        n_tty_receive_buf2+0x1c/0x40
+[793739.222419]        tty_ldisc_receive_buf+0x24/0x80
+[793739.222454]        tty_port_default_receive_buf+0x4c/0x80
+[793739.222489]        flush_to_ldisc+0x90/0xe0
+[793739.222523]        process_one_work+0x3e4/0x7c0
+[793739.222558]        worker_thread+0x334/0x5c0
+[793739.222593]        kthread+0x118/0x140
+[793739.222622]        ret_from_fork+0x1c/0x2c
+[793739.222653]                  (null)
+[793739.222682] 
+                other info that might help us debug this:
+
+[793739.222743] Chain exists of:
+                  &buf->lock --> &tty->atomic_write_lock --> &o_tty->termios_rwsem/1
+
+[793739.222857]  Possible unsafe locking scenario:
+
+[793739.222901]        CPU0                    CPU1
+[793739.222930]        ----                    ----
+[793739.222958]   lock(&o_tty->termios_rwsem/1);
+[793739.222996]                                lock(&tty->atomic_write_lock);
+[793739.223042]                                lock(&o_tty->termios_rwsem/1);
+[793739.223090]   lock(&buf->lock);
+[793739.223126] 
+                 *** DEADLOCK ***
+
+[793739.223175] 6 locks held by kworker/u512:1/48907:
+[793739.223202]  #0:  ("events_unbound"){.+.+.+}, at: [<000000000048b1c4>] process_one_work+0x224/0x7c0
+[793739.223268]  #1:  ((&buf->work)){+.+...}, at: [<000000000048b1c4>] process_one_work+0x224/0x7c0
+[793739.223334]  #2:  (&port->buf.lock/1){+.+...}, at: [<0000000000842234>] flush_to_ldisc+0x14/0xe0
+[793739.223409]  #3:  (&tty->ldisc_sem){++++++}, at: [<0000000000841930>] tty_ldisc_ref+0x10/0x40
+[793739.223472]  #4:  (&tty->atomic_write_lock){+.+.+.}, at: [<0000000000842c58>] tty_port_default_receive_buf+0x38/0x80
+[793739.223542]  #5:  (&o_tty->termios_rwsem/1){++++..}, at: [<000000000083bf68>] isig+0x48/0xe0
+[793739.223614] 
+                stack backtrace:
+[793739.223656] CPU: 31 PID: 48907 Comm: kworker/u512:1 Not tainted 4.12.0-rc3-00174-g104c08ba8e92 #337
+[793739.223706] Workqueue: events_unbound flush_to_ldisc
+[793739.223740] Call Trace:
+[793739.223773]  [00000000004cadf0] print_circular_bug+0x2f0/0x340
+[793739.223810]  [00000000004cf5f0] __lock_acquire+0x1430/0x1f60
+[793739.223846]  [00000000004d0c44] lock_acquire+0x1c4/0x220
+[793739.223884]  [0000000000a65c30] __mutex_lock+0x50/0x960
+[793739.223917]  [0000000000a6655c] mutex_lock_nested+0x1c/0x40
+[793739.223953]  [0000000000842708] tty_buffer_flush+0x28/0xc0
+[793739.223989]  [0000000000845518] pty_flush_buffer+0x18/0x80
+[793739.224025]  [000000000083fd5c] tty_driver_flush_buffer+0x1c/0x40
+[793739.224049]  [000000000083bfa8] isig+0x88/0xe0
+[793739.224067]  [000000000083ca10] n_tty_receive_signal_char+0x10/0x80
+[793739.224098]  [000000000083cb04] n_tty_receive_char_special+0x84/0xba0
+[793739.224136]  [000000000083f468] n_tty_receive_buf_common+0x6c8/0xd00
+[793739.224172]  [000000000083fabc] n_tty_receive_buf2+0x1c/0x40
+[793739.224210]  [00000000008428a4] tty_ldisc_receive_buf+0x24/0x80
+[793739.238719]  [0000000000842c6c] tty_port_default_receive_buf+0x4c/0x80
+[793739.238764]  [00000000008422b0] flush_to_ldisc+0x90/0xe0
+[801213.691360] systemd[1]: apt-daily.timer: Adding 58min 11.975605s random time.
+[802384.680571] 20020312-2.exe[68866]: segfault at 9e4 ip 00000000000009e4 (rpc 00000100000009c8) sp 000007feff98a801 error 30001 in 20020312-2.exe[10000000000+2000]
+[802497.773844] ptrace attach of "./guality_check229107.exe"[104216] was attempted by "gdb -nx -nw --quiet ./guality_check229107.exe"[104250]
+[802499.284117] ptrace attach of "./guality_check213189.exe"[104746] was attempted by "gdb -nx -nw --quiet ./guality_check213189.exe"[104775]
+[802500.135533] ptrace attach of "./guality_check226996.exe"[105053] was attempted by "gdb -nx -nw --quiet ./guality_check226996.exe"[105076]
+[802500.935857] ptrace attach of "./guality_check213815.exe"[105346] was attempted by "gdb -nx -nw --quiet ./guality_check213815.exe"[105379]
+[802501.030472] ptrace attach of "./guality_check26895.exe"[105347] was attempted by "gdb -nx -nw --quiet ./guality_check26895.exe"[105382]
+[802503.169810] ptrace attach of "./guality_check213046.exe"[105952] was attempted by "gdb -nx -nw --quiet ./guality_check213046.exe"[105966]
+[802503.737301] ptrace attach of "./guality_check211117.exe"[106048] was attempted by "gdb -nx -nw --quiet ./guality_check211117.exe"[106064]
+[802504.037926] ptrace attach of "./guality_check239184.exe"[106092] was attempted by "gdb -nx -nw --quiet ./guality_check239184.exe"[106107]
+[802509.077650] ptrace attach of "./guality_check213431.exe"[107183] was attempted by "gdb -nx -nw --quiet ./guality_check213431.exe"[107215]
+[802509.507923] ptrace attach of "./guality_check258206.exe"[107284] was attempted by "gdb -nx -nw --quiet ./guality_check258206.exe"[107313]
+[802511.410676] ptrace attach of "./guality_check210733.exe"[107713] was attempted by "gdb -nx -nw --quiet ./guality_check210733.exe"[107739]
+[802775.685208] ptrace attach of "./guality_check169303.exe"[177085] was attempted by "gdb -nx -nw --quiet ./guality_check169303.exe"[177116]
+[802823.238249] ptrace attach of "./guality_check258033.exe"[188503] was attempted by "gdb -nx -nw --quiet ./guality_check258033.exe"[188534]
+[802823.708549] ptrace attach of "./guality_check211411.exe"[188612] was attempted by "gdb -nx -nw --quiet ./guality_check211411.exe"[188644]
+[802824.521090] ptrace attach of "./guality_check192622.exe"[188757] was attempted by "gdb -nx -nw --quiet ./guality_check192622.exe"[188784]
+[802824.909439] ptrace attach of "./guality_check188699.exe"[188887] was attempted by "gdb -nx -nw --quiet ./guality_check188699.exe"[188908]
+[802824.979893] ptrace attach of "./guality_check248069.exe"[188883] was attempted by "gdb -nx -nw --quiet ./guality_check248069.exe"[188922]
+[802830.065854] ptrace attach of "./guality_check185965.exe"[189776] was attempted by "gdb -nx -nw --quiet ./guality_check185965.exe"[189793]
+[802839.466030] ptrace attach of "./guality_check187351.exe"[191362] was attempted by "gdb -nx -nw --quiet ./guality_check187351.exe"[191376]
+[802848.469025] ptrace attach of "./guality_check186828.exe"[192983] was attempted by "gdb -nx -nw --quiet ./guality_check186828.exe"[192998]
+[802854.621126] ptrace attach of "./guality_check188725.exe"[194036] was attempted by "gdb -nx -nw --quiet ./guality_check188725.exe"[194045]
+[802872.667888] ptrace attach of "./guality_check193851.exe"[196969] was attempted by "gdb -nx -nw --quiet ./guality_check193851.exe"[196991]
+[802895.259301] ptrace attach of "./guality_check196261.exe"[200596] was attempted by "gdb -nx -nw --quiet ./guality_check196261.exe"[200605]
+[802912.751084] ptrace attach of "./guality_check200148.exe"[205075] was attempted by "gdb -nx -nw --quiet ./guality_check200148.exe"[205136]
+[802921.982225] ptrace attach of "./guality_check201904.exe"[209556] was attempted by "gdb -nx -nw --quiet ./guality_check201904.exe"[209675]
+[802924.889480] ptrace attach of "./guality_check138975.exe"[211159] was attempted by "gdb -nx -nw --quiet ./guality_check138975.exe"[211250]
+[802954.372537] ptrace attach of "./guality_check216011.exe"[222495] was attempted by "gdb -nx -nw --quiet ./guality_check216011.exe"[222528]
+[802976.111430] ptrace attach of "./guality_check223068.exe"[230080] was attempted by "gdb -nx -nw --quiet ./guality_check223068.exe"[230149]
+[802992.211334] null-2.exe[236540]: segfault at 0 ip 0000010000000cd8 (rpc 0000010000000ccc) sp 000007feffc6fe51 error 30001 in null-2.exe[10000000000+2000]
+[802993.246905] null-2.exe[236870]: segfault at 0 ip 0000010000000cb8 (rpc 0000010000000cb0) sp 000007feffec9e61 error 30001 in null-2.exe[10000000000+2000]
+[802994.314924] null-2.exe[237198]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffdede61 error 30001 in null-2.exe[10000000000+2000]
+[802995.385953] null-2.exe[237577]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffe35e61 error 30001 in null-2.exe[10000000000+2000]
+[802996.533921] null-2.exe[237973]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffd6de61 error 30001 in null-2.exe[10000000000+2000]
+[802998.802055] null-2.exe[238770]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feff8f3e61 error 30001 in null-2.exe[10000000000+2000]
+[803000.351894] null-2.exe[239277]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feff9f9e61 error 30001 in null-2.exe[10000000000+2000]
+[803001.456128] null-3.exe[239686]: segfault at 0 ip 0000010000000d10 (rpc 0000010000000d04) sp 000007feff817e51 error 30001 in null-3.exe[10000000000+2000]
+[803002.608747] null-3.exe[240096]: segfault at 0 ip 0000010000000cf0 (rpc 0000010000000ce8) sp 000007feffe75e61 error 30001 in null-3.exe[10000000000+2000]
+[803003.675997] null-3.exe[240463]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feff86fe61 error 30001 in null-3.exe[10000000000+2000]
+[803004.758869] null-3.exe[240846]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffbb9e61 error 30001 in null-3.exe[10000000000+2000]
+[803006.009138] null-3.exe[241262]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffb81e61 error 30001 in null-3.exe[10000000000+2000]
+[803008.407684] null-3.exe[242131]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffe67e61 error 30001 in null-3.exe[10000000000+2000]
+[803009.993770] null-3.exe[242694]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffff3e61 error 30001 in null-3.exe[10000000000+2000]
+[803011.125231] null-4.exe[243088]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feffc4fe51 error 30001 in null-4.exe[10000000000+2000]
+[803012.134936] null-4.exe[243439]: segfault at 8 ip 0000010000000c5c (rpc 0000010000000c50) sp 000007feffe13e61 error 30001 in null-4.exe[10000000000+2000]
+[803013.242523] null-4.exe[243788]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffef9e61 error 30001 in null-4.exe[10000000000+2000]
+[803014.354275] null-4.exe[244125]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffc05e61 error 30001 in null-4.exe[10000000000+2000]
+[803015.473460] null-4.exe[244452]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffabde61 error 30001 in null-4.exe[10000000000+2000]
+[803017.974511] null-4.exe[245162]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffce5e61 error 30001 in null-4.exe[10000000000+2000]
+[803019.467702] null-4.exe[245601]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffe57e61 error 30001 in null-4.exe[10000000000+2000]
+[803020.619707] null-5.exe[245911]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feffbe7e51 error 30001 in null-5.exe[10000000000+2000]
+[803021.744262] null-5.exe[246239]: segfault at 0 ip 0000010000000c5c (rpc 0000010000000c50) sp 000007feffa75e61 error 30001 in null-5.exe[10000000000+2000]
+[803022.799035] null-5.exe[246570]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feffb99e61 error 30001 in null-5.exe[10000000000+2000]
+[803023.905815] null-5.exe[246930]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feffa03e61 error 30001 in null-5.exe[10000000000+2000]
+[803024.979226] null-5.exe[247272]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feff8f5e61 error 30001 in null-5.exe[10000000000+2000]
+[803027.312628] pr59667.exe[247905]: segfault at 0 ip 0000010000001224 (rpc 0000010000001208) sp 000007feffdefe51 error 30001 in pr59667.exe[10000000000+2000]
+[803027.421319] null-5.exe[247923]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feffd29e61 error 30001 in null-5.exe[10000000000+2000]
+[803028.367950] pr59667.exe[248229]: segfault at 0 ip 0000010000000c68 (rpc 0000010000000c50) sp 000007feffe83e61 error 30001 in pr59667.exe[10000000000+2000]
+[803028.841350] null-5.exe[248382]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feffd91e61 error 30001 in null-5.exe[10000000000+2000]
+[803029.408489] pr59667.exe[248571]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffcc5e61 error 30001 in pr59667.exe[10000000000+2000]
+[803029.886551] null-6.exe[248733]: segfault at 0 ip 0000010000000c7c (rpc 0000010000000c6c) sp 000007feffb7de51 error 30001 in null-6.exe[10000000000+2000]
+[803030.512781] pr59667.exe[248916]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffaefe61 error 30001 in pr59667.exe[10000000000+2000]
+[803030.920700] null-6.exe[249060]: segfault at 0 ip 0000010000000c5c (rpc 0000010000000c50) sp 000007feff88be61 error 30001 in null-6.exe[10000000000+2000]
+[803031.569750] pr59667.exe[249267]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007fefffcde61 error 30001 in pr59667.exe[10000000000+2000]
+[803031.929480] null-6.exe[249353]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffdfbe61 error 30001 in null-6.exe[10000000000+2000]
+[803033.072645] null-6.exe[249700]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffbc3e61 error 30001 in null-6.exe[10000000000+2000]
+[803033.964606] pr59667.exe[249977]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffc77e61 error 30001 in pr59667.exe[10000000000+2000]
+[803034.138863] null-6.exe[250038]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffdefe61 error 30001 in null-6.exe[10000000000+2000]
+[803035.438418] pr59667.exe[250432]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffc59e61 error 30001 in pr59667.exe[10000000000+2000]
+[803036.562844] null-6.exe[250798]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffa2fe61 error 30001 in null-6.exe[10000000000+2000]
+[803038.055738] null-6.exe[251288]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffd2de61 error 30001 in null-6.exe[10000000000+2000]
+[803039.114784] null-7.exe[251570]: segfault at 0 ip 0000010000000c8c (rpc 0000010000000c84) sp 000007fefffa7e61 error 30001 in null-7.exe[10000000000+2000]
+[803040.225903] null-7.exe[251880]: segfault at 0 ip 0000010000000c64 (rpc fff80001012d1c28) sp 000007fefff59f11 error 30001 in null-7.exe[10000000000+2000]
+[803041.279750] null-7.exe[252224]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffff7f11 error 30001 in null-7.exe[10000000000+2000]
+[803042.331058] null-7.exe[252519]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feff80bf11 error 30001 in null-7.exe[10000000000+2000]
+[803043.363792] null-7.exe[252814]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffc51f11 error 30001 in null-7.exe[10000000000+2000]
+[803045.715659] null-7.exe[253494]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffa71f11 error 30001 in null-7.exe[10000000000+2000]
+[803047.185976] null-7.exe[253919]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffc07f11 error 30001 in null-7.exe[10000000000+2000]
+[803048.216735] null-8.exe[254207]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feff99be51 error 30001 in null-8.exe[10000000000+2000]
+[803049.261769] null-8.exe[254493]: segfault at 0 ip 0000010000000c5c (rpc fff80001012d1c28) sp 000007feff877f11 error 30001 in null-8.exe[10000000000+2000]
+[803050.261742] null-8.exe[254805]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feff951f11 error 30001 in null-8.exe[10000000000+2000]
+[803050.887437] null-1.exe[255000]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feff819e51 error 30001 in null-1.exe[10000000000+2000]
+[803051.362478] null-8.exe[255128]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffacbf11 error 30001 in null-8.exe[10000000000+2000]
+[803051.926074] null-1.exe[255322]: segfault at 0 ip 0000010000000c5c (rpc fff80001012d1c28) sp 000007feff991f11 error 30001 in null-1.exe[10000000000+2000]
+[803052.369133] null-8.exe[255467]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffea1f11 error 30001 in null-8.exe[10000000000+2000]
+[803052.955884] null-1.exe[255655]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffdf5f11 error 30001 in null-1.exe[10000000000+2000]
+[803053.965074] null-1.exe[255998]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007fefff95f11 error 30001 in null-1.exe[10000000000+2000]
+[803054.666183] null-8.exe[256182]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feff8b3f11 error 30001 in null-8.exe[10000000000+2000]
+[803054.973972] null-1.exe[256284]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feff8f1f11 error 30001 in null-1.exe[10000000000+2000]
+[803056.204541] null-8.exe[256631]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffc21f11 error 30001 in null-8.exe[10000000000+2000]
+[803057.247013] null-9.exe[256940]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feffb63e51 error 30001 in null-9.exe[10000000000+2000]
+[803057.340135] null-1.exe[256965]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffba7f11 error 30001 in null-1.exe[10000000000+2000]
+[803058.357417] null-9.exe[257259]: segfault at 0 ip 0000010000000c5c (rpc fff80001012d1c28) sp 000007feffa05f11 error 30001 in null-9.exe[10000000000+2000]
+[803058.843938] null-1.exe[257385]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffebdf11 error 30001 in null-1.exe[10000000000+2000]
+[803059.403440] null-9.exe[257572]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feff875f11 error 30001 in null-9.exe[10000000000+2000]
+[803059.840659] null-10.exe[257700]: segfault at 0 ip 0000010000000d08 (rpc 0000010000000cfc) sp 000007feffc11e51 error 30001 in null-10.exe[10000000000+2000]
+[803060.454649] null-9.exe[257864]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007fefffd5f11 error 30001 in null-9.exe[10000000000+2000]
+[803060.957135] null-10.exe[257970]: segfault at 0 ip 0000010000000cd8 (rpc 0000010000000cd0) sp 000007feffc9de61 error 30001 in null-10.exe[10000000000+2000]
+[803061.472448] null-9.exe[258138]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffeb3f11 error 30001 in null-9.exe[10000000000+2000]
+[803062.035573] null-10.exe[258263]: segfault at 0 ip 0000010000000ae8 (rpc 0000010000000adc) sp 000007fefffc3e51 error 30001 in null-10.exe[10000000000+2000]
+[803063.107634] null-10.exe[258575]: segfault at 0 ip 0000010000000ae8 (rpc 0000010000000adc) sp 000007feffc89e51 error 30001 in null-10.exe[10000000000+2000]
+[803063.844713] null-9.exe[258766]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007fefff93f11 error 30001 in null-9.exe[10000000000+2000]
+[803064.133309] null-10.exe[258843]: segfault at 0 ip 0000010000000aec (rpc 0000010000000adc) sp 000007feffe67e61 error 30001 in null-10.exe[10000000000+2000]
+[803065.345884] null-9.exe[259186]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffd0df11 error 30001 in null-9.exe[10000000000+2000]
+[803066.588970] null-10.exe[259503]: segfault at 0 ip 0000010000000ae8 (rpc 0000010000000adc) sp 000007feff9a1e51 error 30001 in null-10.exe[10000000000+2000]
+[803067.896589] ptrace attach of "./guality_check250979.exe"[259593] was attempted by "gdb -nx -nw --quiet ./guality_check250979.exe"[259623]
+[803068.098979] null-10.exe[259880]: segfault at 0 ip 0000010000000aa8 (rpc 0000010000000a9c) sp 000007feffa21e51 error 30001 in null-10.exe[10000000000+2000]
+[803069.111312] null-11.exe[260133]: segfault at 0 ip 0000010000000cb8 (rpc 0000010000000cac) sp 000007feffce5e51 error 30001 in null-11.exe[10000000000+2000]
+[803070.172849] null-11.exe[260508]: segfault at 0 ip 0000010000000c98 (rpc 0000010000000c90) sp 000007feff805e61 error 30001 in null-11.exe[10000000000+2000]
+[803071.224300] null-11.exe[260991]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffe91e61 error 30001 in null-11.exe[10000000000+2000]
+[803072.432030] null-11.exe[261501]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffb43e61 error 30001 in null-11.exe[10000000000+2000]
+[803073.448482] null-11.exe[262040]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffb9de61 error 30001 in null-11.exe[10000000000+2000]
+[803075.900059] null-11.exe[1397]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feff857e61 error 30001 in null-11.exe[10000000000+2000]
+[803077.458719] null-11.exe[1952]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feff8fbe61 error 30001 in null-11.exe[10000000000+2000]
+[803525.769845] null-6.exe[159446]: segfault at 0 ip 0000010000000b7c (rpc 0000010000000b6c) sp 000007feffea0351 error 30001 in null-6.exe[10000000000+2000]
+[803526.749664] null-6.exe[159766]: segfault at 0 ip 0000010000000b5c (rpc 0000010000000b50) sp 000007feff8c4361 error 30001 in null-6.exe[10000000000+2000]
+[803527.670340] null-6.exe[160067]: segfault at 0 ip 0000010000000968 (rpc 000001000000095c) sp 000007feffe16361 error 30001 in null-6.exe[10000000000+2000]
+[803528.712984] null-6.exe[160386]: segfault at 0 ip 0000010000000968 (rpc 000001000000095c) sp 000007feffa06361 error 30001 in null-6.exe[10000000000+2000]
+[803529.735103] null-6.exe[160739]: segfault at 0 ip 0000010000000968 (rpc 000001000000095c) sp 000007feffb3a361 error 30001 in null-6.exe[10000000000+2000]
+[803531.999315] null-6.exe[161447]: segfault at 0 ip 0000010000000968 (rpc 000001000000095c) sp 000007feffcd8361 error 30001 in null-6.exe[10000000000+2000]
+[803533.414942] null-6.exe[161890]: segfault at 0 ip 0000010000000968 (rpc 000001000000095c) sp 000007fefff16361 error 30001 in null-6.exe[10000000000+2000]
+[803534.385613] null-7.exe[162168]: segfault at 0 ip 0000010000000b8c (rpc 0000010000000b84) sp 000007feff9d8361 error 30001 in null-7.exe[10000000000+2000]
+[803535.377859] null-7.exe[162460]: segfault at 0 ip 0000010000000b64 (rpc fff8000100f41c28) sp 000007feffba8411 error 30001 in null-7.exe[10000000000+2000]
+[803536.401780] null-7.exe[162805]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffe72411 error 30001 in null-7.exe[10000000000+2000]
+[803537.353911] null-7.exe[163122]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffdd4411 error 30001 in null-7.exe[10000000000+2000]
+[803538.358274] null-7.exe[163441]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007fefff3e411 error 30001 in null-7.exe[10000000000+2000]
+[803540.577747] null-7.exe[164119]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007fefff48411 error 30001 in null-7.exe[10000000000+2000]
+[803541.938467] null-7.exe[164497]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffbe2411 error 30001 in null-7.exe[10000000000+2000]
+[803542.907855] null-8.exe[164753]: segfault at 0 ip 0000010000000b78 (rpc 0000010000000b6c) sp 000007feff8a2351 error 30001 in null-8.exe[10000000000+2000]
+[803543.863329] null-8.exe[165005]: segfault at 0 ip 0000010000000b5c (rpc fff8000100f41c28) sp 000007fefff7a411 error 30001 in null-8.exe[10000000000+2000]
+[803544.835228] null-8.exe[165273]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feff8d0411 error 30001 in null-8.exe[10000000000+2000]
+[803545.770535] null-8.exe[165597]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffda0411 error 30001 in null-8.exe[10000000000+2000]
+[803546.731413] null-8.exe[165838]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffd92411 error 30001 in null-8.exe[10000000000+2000]
+[803548.846850] null-1.exe[166441]: segfault at 0 ip 0000010000000b78 (rpc 0000010000000b6c) sp 000007feffaae351 error 30001 in null-1.exe[10000000000+2000]
+[803548.906592] null-8.exe[166463]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007fefff76411 error 30001 in null-8.exe[10000000000+2000]
+[803549.801234] null-1.exe[166704]: segfault at 0 ip 0000010000000b5c (rpc fff8000100f41c28) sp 000007feff9d6411 error 30001 in null-1.exe[10000000000+2000]
+[803550.278697] null-8.exe[166828]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffdd6411 error 30001 in null-8.exe[10000000000+2000]
+[803550.728549] null-1.exe[166952]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feff8ce411 error 30001 in null-1.exe[10000000000+2000]
+[803551.181818] null-9.exe[167092]: segfault at 0 ip 0000010000000b78 (rpc 0000010000000b6c) sp 000007feffa7a351 error 30001 in null-9.exe[10000000000+2000]
+[803551.747770] null-1.exe[167227]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feff84a411 error 30001 in null-1.exe[10000000000+2000]
+[803552.114656] null-9.exe[167356]: segfault at 0 ip 0000010000000b5c (rpc fff8000100f41c28) sp 000007feffa2c411 error 30001 in null-9.exe[10000000000+2000]
+[803552.716461] null-1.exe[167521]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffef4411 error 30001 in null-1.exe[10000000000+2000]
+[803553.105987] null-9.exe[167639]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feff834411 error 30001 in null-9.exe[10000000000+2000]
+[803554.064291] null-9.exe[167931]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffdf2411 error 30001 in null-9.exe[10000000000+2000]
+[803554.969697] null-1.exe[168177]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feff96e411 error 30001 in null-1.exe[10000000000+2000]
+[803554.999307] null-9.exe[168199]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feff82c411 error 30001 in null-9.exe[10000000000+2000]
+[803556.194995] pr59667.exe[168547]: segfault at 0 ip 0000010000001004 (rpc 0000010000000fe8) sp 000007feff9a4341 error 30001 in pr59667.exe[10000000000+2000]
+[803556.408163] null-1.exe[168609]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007feffade411 error 30001 in null-1.exe[10000000000+2000]
+[803557.157942] pr59667.exe[168844]: segfault at 0 ip 0000010000000b68 (rpc 0000010000000b50) sp 000007feffc9e361 error 30001 in pr59667.exe[10000000000+2000]
+[803557.303018] null-9.exe[168897]: segfault at 0 ip 0000010000000968 (rpc fff8000100f41c28) sp 000007fefffca411 error 30001 in null-9.exe[10000000000+2000]
+[803557.347805] null-10.exe[168907]: segfault at 0 ip 0000010000000c08 (rpc 0000010000000bfc) sp 000007feffe66351 error 30001 in null-10.exe[10000000000+2000]
+[803558.166121] pr59667.exe[169147]: segfault at 0 ip 0000010000000974 (rpc 000001000000095c) sp 000007feff860361 error 30001 in pr59667.exe[10000000000+2000]
+[803558.349201] null-10.exe[169197]: segfault at 0 ip 0000010000000bd8 (rpc 0000010000000bd0) sp 000007fefff9e361 error 30001 in null-10.exe[10000000000+2000]
+[803559.113872] show_signal_msg: 1 callbacks suppressed
+[803559.113930] pr59667.exe[169416]: segfault at 0 ip 0000010000000974 (rpc 000001000000095c) sp 000007feffb82361 error 30001 in pr59667.exe[10000000000+2000]
+[803559.310402] null-10.exe[169479]: segfault at 0 ip 00000100000009e8 (rpc 00000100000009dc) sp 000007feffaac351 error 30001 in null-10.exe[10000000000+2000]
+[803560.132963] pr59667.exe[169712]: segfault at 0 ip 0000010000000974 (rpc 000001000000095c) sp 000007feffb7e361 error 30001 in pr59667.exe[10000000000+2000]
+[803560.295466] null-10.exe[169769]: segfault at 0 ip 00000100000009e8 (rpc 00000100000009dc) sp 000007feffc5e351 error 30001 in null-10.exe[10000000000+2000]
+[803561.252055] null-10.exe[170065]: segfault at 0 ip 00000100000009ec (rpc 00000100000009dc) sp 000007feff9d4361 error 30001 in null-10.exe[10000000000+2000]
+[803562.310834] pr59667.exe[170386]: segfault at 0 ip 0000010000000974 (rpc 000001000000095c) sp 000007feffcee361 error 30001 in pr59667.exe[10000000000+2000]
+[803563.474982] null-10.exe[170746]: segfault at 0 ip 00000100000009e8 (rpc 00000100000009dc) sp 000007feffa72351 error 30001 in null-10.exe[10000000000+2000]
+[803563.646582] pr59667.exe[170820]: segfault at 0 ip 0000010000000974 (rpc 000001000000095c) sp 000007feff9ac361 error 30001 in pr59667.exe[10000000000+2000]
+[803564.881953] null-10.exe[171171]: segfault at 0 ip 00000100000009a8 (rpc 000001000000099c) sp 000007feff93c351 error 30001 in null-10.exe[10000000000+2000]
+[803565.883611] null-11.exe[171473]: segfault at 0 ip 0000010000000bb8 (rpc 0000010000000bac) sp 000007feffc0a351 error 30001 in null-11.exe[10000000000+2000]
+[803566.831321] null-11.exe[171793]: segfault at 0 ip 0000010000000b98 (rpc 0000010000000b90) sp 000007feff9de361 error 30001 in null-11.exe[10000000000+2000]
+[803567.775922] null-11.exe[172085]: segfault at 0 ip 00000100000009a4 (rpc 000001000000099c) sp 000007feffd78361 error 30001 in null-11.exe[10000000000+2000]
+[803568.745973] null-11.exe[172418]: segfault at 0 ip 00000100000009a4 (rpc 000001000000099c) sp 000007feffb04361 error 30001 in null-11.exe[10000000000+2000]
+[803569.786165] null-11.exe[172742]: segfault at 0 ip 00000100000009a4 (rpc 000001000000099c) sp 000007feffb5c361 error 30001 in null-11.exe[10000000000+2000]
+[803572.085651] null-11.exe[173485]: segfault at 0 ip 00000100000009a4 (rpc 000001000000099c) sp 000007feffbfa361 error 30001 in null-11.exe[10000000000+2000]
+[803573.630846] null-11.exe[173901]: segfault at 0 ip 00000100000009a4 (rpc 000001000000099c) sp 000007feffc12361 error 30001 in null-11.exe[10000000000+2000]
+[803574.604910] null-2.exe[174177]: segfault at 0 ip 0000010000000bd8 (rpc 0000010000000bcc) sp 000007feffc6e351 error 30001 in null-2.exe[10000000000+2000]
+[803575.556867] null-2.exe[174459]: segfault at 0 ip 0000010000000bb8 (rpc 0000010000000bb0) sp 000007feffd96361 error 30001 in null-2.exe[10000000000+2000]
+[803576.590318] null-2.exe[174757]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feffe68361 error 30001 in null-2.exe[10000000000+2000]
+[803577.612152] null-2.exe[175042]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feffb80361 error 30001 in null-2.exe[10000000000+2000]
+[803578.763949] null-2.exe[175329]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feffa2e361 error 30001 in null-2.exe[10000000000+2000]
+[803581.061520] null-2.exe[176059]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feffa00361 error 30001 in null-2.exe[10000000000+2000]
+[803582.535345] null-2.exe[176460]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feff7fc361 error 30001 in null-2.exe[10000000000+2000]
+[803583.603382] null-3.exe[176729]: segfault at 0 ip 0000010000000c10 (rpc 0000010000000c04) sp 000007feffc8c351 error 30001 in null-3.exe[10000000000+2000]
+[803584.678618] null-3.exe[177027]: segfault at 0 ip 0000010000000bf0 (rpc 0000010000000be8) sp 000007feffa6a361 error 30001 in null-3.exe[10000000000+2000]
+[803585.751974] null-3.exe[177301]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feff9da361 error 30001 in null-3.exe[10000000000+2000]
+[803586.821982] null-3.exe[177563]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feffbae361 error 30001 in null-3.exe[10000000000+2000]
+[803587.884708] null-3.exe[177848]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feff838361 error 30001 in null-3.exe[10000000000+2000]
+[803590.132466] null-3.exe[178477]: segfault at 0 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feffe18361 error 30001 in null-3.exe[10000000000+2000]
+[803591.504092] null-3.exe[178850]: segfault at 0 ip 00000100000009a4 (rpc 000001000000099c) sp 000007feffb3c361 error 30001 in null-3.exe[10000000000+2000]
+[803592.423120] null-4.exe[179085]: segfault at 0 ip 0000010000000b78 (rpc 0000010000000b6c) sp 000007fefff1a351 error 30001 in null-4.exe[10000000000+2000]
+[803593.366066] null-4.exe[179342]: segfault at 8 ip 0000010000000b5c (rpc 0000010000000b50) sp 000007feff9f8361 error 30001 in null-4.exe[10000000000+2000]
+[803594.329099] null-4.exe[179583]: segfault at 8 ip 0000010000000964 (rpc 000001000000095c) sp 000007feffd20361 error 30001 in null-4.exe[10000000000+2000]
+[803595.300219] null-4.exe[179848]: segfault at 8 ip 0000010000000964 (rpc 000001000000095c) sp 000007feffe54361 error 30001 in null-4.exe[10000000000+2000]
+[803596.225492] null-4.exe[180073]: segfault at 8 ip 0000010000000964 (rpc 000001000000095c) sp 000007feff83c361 error 30001 in null-4.exe[10000000000+2000]
+[803598.483448] null-4.exe[180729]: segfault at 8 ip 0000010000000964 (rpc 000001000000095c) sp 000007feffbb2361 error 30001 in null-4.exe[10000000000+2000]
+[803599.897984] null-4.exe[181155]: segfault at 8 ip 0000010000000964 (rpc 000001000000095c) sp 000007feffbbe361 error 30001 in null-4.exe[10000000000+2000]
+[803600.883582] null-5.exe[181446]: segfault at 0 ip 0000010000000b78 (rpc 0000010000000b6c) sp 000007feff93e351 error 30001 in null-5.exe[10000000000+2000]
+[803601.889170] null-5.exe[181736]: segfault at 0 ip 0000010000000b5c (rpc 0000010000000b50) sp 000007feffb7c361 error 30001 in null-5.exe[10000000000+2000]
+[803602.891678] null-5.exe[182030]: segfault at 0 ip 0000010000000970 (rpc 000001000000095c) sp 000007feffad8361 error 30001 in null-5.exe[10000000000+2000]
+[803603.854907] null-5.exe[182315]: segfault at 0 ip 0000010000000970 (rpc 000001000000095c) sp 000007feffbac361 error 30001 in null-5.exe[10000000000+2000]
+[803604.788508] null-5.exe[182639]: segfault at 0 ip 0000010000000970 (rpc 000001000000095c) sp 000007fefff8e361 error 30001 in null-5.exe[10000000000+2000]
+[803607.185371] null-5.exe[183377]: segfault at 0 ip 0000010000000970 (rpc 000001000000095c) sp 000007feffae2361 error 30001 in null-5.exe[10000000000+2000]
+[803608.582984] null-5.exe[183802]: segfault at 0 ip 0000010000000970 (rpc 000001000000095c) sp 000007feffb58361 error 30001 in null-5.exe[10000000000+2000]
+[804215.134022] ptrace attach of "./guality_check196261.exe"[136583] was attempted by "gdb -nx -nw --quiet ./guality_check196261.exe"[136609]
+[804215.671290] ptrace attach of "./guality_check250979.exe"[136699] was attempted by "gdb -nx -nw --quiet ./guality_check250979.exe"[136724]
+[804215.769892] ptrace attach of "./guality_check188725.exe"[136717] was attempted by "gdb -nx -nw --quiet ./guality_check188725.exe"[136743]
+[804215.963027] ptrace attach of "./guality_check213815.exe"[136788] was attempted by "gdb -nx -nw --quiet ./guality_check213815.exe"[136830]
+[804216.856905] ptrace attach of "./guality_check213431.exe"[137019] was attempted by "gdb -nx -nw --quiet ./guality_check213431.exe"[137043]
+[804217.312093] ptrace attach of "./guality_check213189.exe"[137129] was attempted by "gdb -nx -nw --quiet ./guality_check213189.exe"[137154]
+[804217.602142] ptrace attach of "./guality_check226996.exe"[137199] was attempted by "gdb -nx -nw --quiet ./guality_check226996.exe"[137224]
+[804220.038721] ptrace attach of "./guality_check239184.exe"[137737] was attempted by "gdb -nx -nw --quiet ./guality_check239184.exe"[137759]
+[804221.144891] ptrace attach of "./guality_check186828.exe"[137974] was attempted by "gdb -nx -nw --quiet ./guality_check186828.exe"[137992]
+[804221.841642] ptrace attach of "./guality_check213046.exe"[138185] was attempted by "gdb -nx -nw --quiet ./guality_check213046.exe"[138207]
+[804222.467746] ptrace attach of "./guality_check258206.exe"[138256] was attempted by "gdb -nx -nw --quiet ./guality_check258206.exe"[138294]
+[804224.581551] ptrace attach of "./guality_check211117.exe"[138700] was attempted by "gdb -nx -nw --quiet ./guality_check211117.exe"[138730]
+[804225.437896] ptrace attach of "./guality_check210733.exe"[138862] was attempted by "gdb -nx -nw --quiet ./guality_check210733.exe"[138900]
+[804227.440457] ptrace attach of "./guality_check169303.exe"[139344] was attempted by "gdb -nx -nw --quiet ./guality_check169303.exe"[139358]
+[804228.211149] ptrace attach of "./guality_check26895.exe"[139496] was attempted by "gdb -nx -nw --quiet ./guality_check26895.exe"[139520]
+[804230.093309] ptrace attach of "./guality_check229107.exe"[139849] was attempted by "gdb -nx -nw --quiet ./guality_check229107.exe"[139876]
+[804643.808926] null-11.exe[261285]: segfault at 0 ip 0000010000000cb8 (rpc 0000010000000cac) sp 000007feff9e9e51 error 30001 in null-11.exe[10000000000+2000]
+[804644.832712] null-11.exe[261636]: segfault at 0 ip 0000010000000c98 (rpc 0000010000000c90) sp 000007feffbd3e61 error 30001 in null-11.exe[10000000000+2000]
+[804645.862870] null-11.exe[261982]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffc57e61 error 30001 in null-11.exe[10000000000+2000]
+[804646.982688] null-11.exe[542]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffeb5e61 error 30001 in null-11.exe[10000000000+2000]
+[804647.990968] null-11.exe[938]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffdcbe61 error 30001 in null-11.exe[10000000000+2000]
+[804650.376507] null-11.exe[1747]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffb11e61 error 30001 in null-11.exe[10000000000+2000]
+[804651.859703] null-11.exe[2214]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffe43e61 error 30001 in null-11.exe[10000000000+2000]
+[804652.896423] null-2.exe[2559]: segfault at 0 ip 0000010000000cd8 (rpc 0000010000000ccc) sp 000007feffac5e51 error 30001 in null-2.exe[10000000000+2000]
+[804654.072040] null-2.exe[2948]: segfault at 0 ip 0000010000000cb8 (rpc 0000010000000cb0) sp 000007feffc43e61 error 30001 in null-2.exe[10000000000+2000]
+[804655.154626] null-2.exe[3281]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007fefffb9e61 error 30001 in null-2.exe[10000000000+2000]
+[804656.224210] null-2.exe[3655]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feff887e61 error 30001 in null-2.exe[10000000000+2000]
+[804657.290165] null-2.exe[3972]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffbcbe61 error 30001 in null-2.exe[10000000000+2000]
+[804659.721901] null-2.exe[4691]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffee9e61 error 30001 in null-2.exe[10000000000+2000]
+[804661.282158] null-2.exe[5161]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feff8d1e61 error 30001 in null-2.exe[10000000000+2000]
+[804662.311968] null-3.exe[5480]: segfault at 0 ip 0000010000000d10 (rpc 0000010000000d04) sp 000007feff8f1e51 error 30001 in null-3.exe[10000000000+2000]
+[804663.311560] null-3.exe[5836]: segfault at 0 ip 0000010000000cf0 (rpc 0000010000000ce8) sp 000007feffd5be61 error 30001 in null-3.exe[10000000000+2000]
+[804664.408528] null-3.exe[6186]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffc21e61 error 30001 in null-3.exe[10000000000+2000]
+[804665.531105] null-3.exe[6567]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffba7e61 error 30001 in null-3.exe[10000000000+2000]
+[804666.642107] null-3.exe[6951]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feffb0be61 error 30001 in null-3.exe[10000000000+2000]
+[804669.064604] null-3.exe[7807]: segfault at 0 ip 0000010000000ac4 (rpc 0000010000000abc) sp 000007feff86be61 error 30001 in null-3.exe[10000000000+2000]
+[804670.602385] null-3.exe[8363]: segfault at 0 ip 0000010000000aa4 (rpc 0000010000000a9c) sp 000007feffa7be61 error 30001 in null-3.exe[10000000000+2000]
+[804671.666711] null-4.exe[8745]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feff9fbe51 error 30001 in null-4.exe[10000000000+2000]
+[804672.789203] null-4.exe[9126]: segfault at 8 ip 0000010000000c5c (rpc 0000010000000c50) sp 000007fefff47e61 error 30001 in null-4.exe[10000000000+2000]
+[804673.911893] null-4.exe[9478]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007fefff8de61 error 30001 in null-4.exe[10000000000+2000]
+[804675.008647] null-4.exe[9822]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffbf7e61 error 30001 in null-4.exe[10000000000+2000]
+[804676.075012] null-4.exe[10176]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffa89e61 error 30001 in null-4.exe[10000000000+2000]
+[804678.481805] null-4.exe[10961]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffe9de61 error 30001 in null-4.exe[10000000000+2000]
+[804679.982321] pr59667.exe[11466]: segfault at 0 ip 0000010000001224 (rpc 0000010000001208) sp 000007feffb9de51 error 30001 in pr59667.exe[10000000000+2000]
+[804679.994010] null-4.exe[11469]: segfault at 0 ip 0000010000000a64 (rpc 0000010000000a5c) sp 000007feffe6de61 error 30001 in null-4.exe[10000000000+2000]
+[804681.085055] null-5.exe[11848]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feffb4de51 error 30001 in null-5.exe[10000000000+2000]
+[804681.116108] pr59667.exe[11854]: segfault at 0 ip 0000010000000c68 (rpc 0000010000000c50) sp 000007feffa9fe61 error 30001 in pr59667.exe[10000000000+2000]
+[804682.194836] pr59667.exe[12254]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffadfe61 error 30001 in pr59667.exe[10000000000+2000]
+[804682.205907] null-5.exe[12255]: segfault at 0 ip 0000010000000c5c (rpc 0000010000000c50) sp 000007feffedfe61 error 30001 in null-5.exe[10000000000+2000]
+[804683.254148] pr59667.exe[12630]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffc81e61 error 30001 in pr59667.exe[10000000000+2000]
+[804683.287304] null-5.exe[12647]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feff9a9e61 error 30001 in null-5.exe[10000000000+2000]
+[804684.387122] pr59667.exe[13003]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffb7fe61 error 30001 in pr59667.exe[10000000000+2000]
+[804684.466419] null-5.exe[13048]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feffa39e61 error 30001 in null-5.exe[10000000000+2000]
+[804685.598081] null-5.exe[13483]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feffc6de61 error 30001 in null-5.exe[10000000000+2000]
+[804686.898007] pr59667.exe[13950]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffa43e61 error 30001 in pr59667.exe[10000000000+2000]
+[804688.005748] null-5.exe[14362]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007fefff13e61 error 30001 in null-5.exe[10000000000+2000]
+[804688.498370] pr59667.exe[14510]: segfault at 0 ip 0000010000000a74 (rpc 0000010000000a5c) sp 000007feffec9e61 error 30001 in pr59667.exe[10000000000+2000]
+[804689.580819] null-5.exe[14887]: segfault at 0 ip 0000010000000a70 (rpc 0000010000000a5c) sp 000007feff86fe61 error 30001 in null-5.exe[10000000000+2000]
+[804690.667802] null-6.exe[15313]: segfault at 0 ip 0000010000000c7c (rpc 0000010000000c6c) sp 000007feffe7be51 error 30001 in null-6.exe[10000000000+2000]
+[804691.750845] null-6.exe[15687]: segfault at 0 ip 0000010000000c5c (rpc 0000010000000c50) sp 000007feff871e61 error 30001 in null-6.exe[10000000000+2000]
+[804692.832470] null-6.exe[16100]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffe51e61 error 30001 in null-6.exe[10000000000+2000]
+[804693.911596] null-6.exe[16502]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffbcde61 error 30001 in null-6.exe[10000000000+2000]
+[804695.016766] null-6.exe[16879]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffc45e61 error 30001 in null-6.exe[10000000000+2000]
+[804697.518573] null-6.exe[17813]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007fefffb1e61 error 30001 in null-6.exe[10000000000+2000]
+[804698.986854] null-6.exe[18338]: segfault at 0 ip 0000010000000a68 (rpc 0000010000000a5c) sp 000007feffb43e61 error 30001 in null-6.exe[10000000000+2000]
+[804700.018111] null-7.exe[18724]: segfault at 0 ip 0000010000000c8c (rpc 0000010000000c84) sp 000007feff885e61 error 30001 in null-7.exe[10000000000+2000]
+[804701.069060] null-7.exe[19092]: segfault at 0 ip 0000010000000c64 (rpc fff80001012d1c28) sp 000007feff8f7f11 error 30001 in null-7.exe[10000000000+2000]
+[804702.131420] null-7.exe[19478]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffcdff11 error 30001 in null-7.exe[10000000000+2000]
+[804703.247527] null-7.exe[19860]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007fefff85f11 error 30001 in null-7.exe[10000000000+2000]
+[804703.582594] null-1.exe[19953]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feff81be51 error 30001 in null-1.exe[10000000000+2000]
+[804704.285639] null-7.exe[20235]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffe17f11 error 30001 in null-7.exe[10000000000+2000]
+[804704.674382] null-1.exe[20364]: segfault at 0 ip 0000010000000c5c (rpc fff80001012d1c28) sp 000007feffaabf11 error 30001 in null-1.exe[10000000000+2000]
+[804705.777433] null-1.exe[20765]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffaeff11 error 30001 in null-1.exe[10000000000+2000]
+[804706.753207] null-7.exe[21131]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feff83ff11 error 30001 in null-7.exe[10000000000+2000]
+[804706.861087] null-1.exe[21164]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007fefff49f11 error 30001 in null-1.exe[10000000000+2000]
+[804707.920124] null-1.exe[21571]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007fefffbbf11 error 30001 in null-1.exe[10000000000+2000]
+[804708.230504] null-7.exe[21692]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffb69f11 error 30001 in null-7.exe[10000000000+2000]
+[804709.371137] null-8.exe[22092]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007fefff6de51 error 30001 in null-8.exe[10000000000+2000]
+[804710.256633] null-1.exe[22418]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffa9df11 error 30001 in null-1.exe[10000000000+2000]
+[804710.435349] null-8.exe[22479]: segfault at 0 ip 0000010000000c5c (rpc fff80001012d1c28) sp 000007feffd8ff11 error 30001 in null-8.exe[10000000000+2000]
+[804711.613519] null-8.exe[22868]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffbe5f11 error 30001 in null-8.exe[10000000000+2000]
+[804711.853240] null-1.exe[22986]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffefbf11 error 30001 in null-1.exe[10000000000+2000]
+[804712.739494] null-8.exe[23293]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffa4df11 error 30001 in null-8.exe[10000000000+2000]
+[804712.983533] null-10.exe[23377]: segfault at 0 ip 0000010000000d08 (rpc 0000010000000cfc) sp 000007feff9d9e51 error 30001 in null-10.exe[10000000000+2000]
+[804713.857318] null-8.exe[23649]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffb93f11 error 30001 in null-8.exe[10000000000+2000]
+[804714.094215] null-10.exe[23744]: segfault at 0 ip 0000010000000cd8 (rpc 0000010000000cd0) sp 000007feffb23e61 error 30001 in null-10.exe[10000000000+2000]
+[804715.198698] null-10.exe[24153]: segfault at 0 ip 0000010000000ae8 (rpc 0000010000000adc) sp 000007feff88fe51 error 30001 in null-10.exe[10000000000+2000]
+[804716.295256] null-8.exe[24508]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffabbf11 error 30001 in null-8.exe[10000000000+2000]
+[804716.332952] null-10.exe[24544]: segfault at 0 ip 0000010000000ae8 (rpc 0000010000000adc) sp 000007feffee3e51 error 30001 in null-10.exe[10000000000+2000]
+[804717.420170] null-10.exe[24939]: segfault at 0 ip 0000010000000aec (rpc 0000010000000adc) sp 000007feffb9fe61 error 30001 in null-10.exe[10000000000+2000]
+[804717.832252] null-8.exe[25065]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffab1f11 error 30001 in null-8.exe[10000000000+2000]
+[804718.874080] null-9.exe[25427]: segfault at 0 ip 0000010000000c78 (rpc 0000010000000c6c) sp 000007feffa61e51 error 30001 in null-9.exe[10000000000+2000]
+[804719.908745] null-10.exe[25820]: segfault at 0 ip 0000010000000ae8 (rpc 0000010000000adc) sp 000007fefffd5e51 error 30001 in null-10.exe[10000000000+2000]
+[804720.025040] null-9.exe[25868]: segfault at 0 ip 0000010000000c5c (rpc fff80001012d1c28) sp 000007feffe0ff11 error 30001 in null-9.exe[10000000000+2000]
+[804721.069898] null-9.exe[26219]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffcc5f11 error 30001 in null-9.exe[10000000000+2000]
+[804721.439248] null-10.exe[26341]: segfault at 0 ip 0000010000000aa8 (rpc 0000010000000a9c) sp 000007feff8dde51 error 30001 in null-10.exe[10000000000+2000]
+[804722.161957] null-9.exe[26596]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feff8d7f11 error 30001 in null-9.exe[10000000000+2000]
+[804723.223877] null-9.exe[26992]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffe65f11 error 30001 in null-9.exe[10000000000+2000]
+[804725.668395] null-9.exe[27813]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feffd79f11 error 30001 in null-9.exe[10000000000+2000]
+[804727.128760] null-9.exe[28355]: segfault at 0 ip 0000010000000a68 (rpc fff80001012d1c28) sp 000007feff8c1f11 error 30001 in null-9.exe[10000000000+2000]
+[805170.018602] ptrace attach of "./guality_check184854.exe"[190604] was attempted by "gdb -nx -nw --quiet ./guality_check184854.exe"[190633]
+[805172.307494] ptrace attach of "./guality_check185490.exe"[191297] was attempted by "gdb -nx -nw --quiet ./guality_check185490.exe"[191324]
+[805172.510998] 20020312-2.exe[191562]: segfault at a44 ip 0000000000000a44 (rpc 0000010000000a28) sp 000007feffda8581 error 30001 in 20020312-2.exe[10000000000+2000]
+[805173.755385] ptrace attach of "./guality_check185925.exe"[191662] was attempted by "gdb -nx -nw --quiet ./guality_check185925.exe"[191690]
+[805174.070718] ptrace attach of "./guality_check185954.exe"[191735] was attempted by "gdb -nx -nw --quiet ./guality_check185954.exe"[191760]
+[805176.807562] ptrace attach of "./guality_check186715.exe"[192380] was attempted by "gdb -nx -nw --quiet ./guality_check186715.exe"[192406]
+[805182.077756] ptrace attach of "./guality_check188236.exe"[193774] was attempted by "gdb -nx -nw --quiet ./guality_check188236.exe"[193821]
+[805183.177416] ptrace attach of "./guality_check188601.exe"[194049] was attempted by "gdb -nx -nw --quiet ./guality_check188601.exe"[194069]
+[805183.999222] ptrace attach of "./guality_check188747.exe"[194259] was attempted by "gdb -nx -nw --quiet ./guality_check188747.exe"[194283]
+[805185.327955] ptrace attach of "./guality_check189173.exe"[194610] was attempted by "gdb -nx -nw --quiet ./guality_check189173.exe"[194631]
+[805187.616558] ptrace attach of "./guality_check189830.exe"[195228] was attempted by "gdb -nx -nw --quiet ./guality_check189830.exe"[195250]
+[805188.225728] ptrace attach of "./guality_check189974.exe"[195353] was attempted by "gdb -nx -nw --quiet ./guality_check189974.exe"[195372]
+[805190.314522] ptrace attach of "./guality_check190729.exe"[195897] was attempted by "gdb -nx -nw --quiet ./guality_check190729.exe"[195914]
+[805190.906088] ptrace attach of "./guality_check190965.exe"[196009] was attempted by "gdb -nx -nw --quiet ./guality_check190965.exe"[196022]
+[805196.421104] ptrace attach of "./guality_check192383.exe"[197337] was attempted by "gdb -nx -nw --quiet ./guality_check192383.exe"[197359]
+[805196.993995] ptrace attach of "./guality_check192587.exe"[197433] was attempted by "gdb -nx -nw --quiet ./guality_check192587.exe"[197452]
+[805286.516576] ptrace attach of "./guality_check210971.exe"[214923] was attempted by "gdb -nx -nw --quiet ./guality_check210971.exe"[214938]
+[805357.561461] ptrace attach of "./guality_check193851.exe"[235022] was attempted by "gdb -nx -nw --quiet ./guality_check193851.exe"[235071]
+[805357.770947] ptrace attach of "./guality_check258033.exe"[235080] was attempted by "gdb -nx -nw --quiet ./guality_check258033.exe"[235109]
+[805357.908190] ptrace attach of "./guality_check185954.exe"[235124] was attempted by "gdb -nx -nw --quiet ./guality_check185954.exe"[235161]
+[805358.114961] ptrace attach of "./guality_check184854.exe"[235140] was attempted by "gdb -nx -nw --quiet ./guality_check184854.exe"[235168]
+[805358.526571] ptrace attach of "./guality_check185965.exe"[235219] was attempted by "gdb -nx -nw --quiet ./guality_check185965.exe"[235252]
+[805358.547410] ptrace attach of "./guality_check189830.exe"[235167] was attempted by "gdb -nx -nw --quiet ./guality_check189830.exe"[235210]
+[805358.590499] ptrace attach of "./guality_check188601.exe"[235175] was attempted by "gdb -nx -nw --quiet ./guality_check188601.exe"[235220]
+[805358.841040] ptrace attach of "./guality_check192383.exe"[235338] was attempted by "gdb -nx -nw --quiet ./guality_check192383.exe"[235352]
+[805359.139160] ptrace attach of "./guality_check248069.exe"[235365] was attempted by "gdb -nx -nw --quiet ./guality_check248069.exe"[235403]
+[805359.217700] ptrace attach of "./guality_check188236.exe"[235295] was attempted by "gdb -nx -nw --quiet ./guality_check188236.exe"[235333]
+[805362.927735] __report_access: 8 callbacks suppressed
+[805362.927798] ptrace attach of "./guality_check189173.exe"[235934] was attempted by "gdb -nx -nw --quiet ./guality_check189173.exe"[235946]
+[805363.097435] ptrace attach of "./guality_check190729.exe"[235949] was attempted by "gdb -nx -nw --quiet ./guality_check190729.exe"[235959]
+[805364.826187] ptrace attach of "./guality_check185925.exe"[236057] was attempted by "gdb -nx -nw --quiet ./guality_check185925.exe"[236065]
+[805364.854652] ptrace attach of "./guality_check200148.exe"[236079] was attempted by "gdb -nx -nw --quiet ./guality_check200148.exe"[236096]
+[805365.179878] ptrace attach of "./guality_check187351.exe"[236105] was attempted by "gdb -nx -nw --quiet ./guality_check187351.exe"[236110]
+[805365.989516] ptrace attach of "./guality_check223068.exe"[236164] was attempted by "gdb -nx -nw --quiet ./guality_check223068.exe"[236168]
+[805366.109391] ptrace attach of "./guality_check185490.exe"[236170] was attempted by "gdb -nx -nw --quiet ./guality_check185490.exe"[236176]
+[805370.077822] ptrace attach of "./guality_check210971.exe"[236243] was attempted by "gdb -nx -nw --quiet ./guality_check210971.exe"[236246]
+[805379.915128] ptrace attach of "./guality_check216011.exe"[236361] was attempted by "gdb -nx -nw --quiet ./guality_check216011.exe"[236364]
+[805400.320792] ptrace attach of "./guality_check138975.exe"[236510] was attempted by "gdb -nx -nw --quiet ./guality_check138975.exe"[236513]
+[805701.743561] ptrace attach of "./guality_check211411.exe"[44013] was attempted by "gdb -nx -nw --quiet ./guality_check211411.exe"[44037]
+[805778.077277] null-1.exe[75463]: segfault at 0 ip 0000010000000bd8 (rpc 0000010000000bcc) sp 000007feffff8101 error 30001 in null-1.exe[10000000000+2000]
+[805778.406144] null-9.exe[75571]: segfault at 0 ip 0000010000000bd8 (rpc 0000010000000bcc) sp 000007feffefc101 error 30001 in null-9.exe[10000000000+2000]
+[805779.119449] null-1.exe[75851]: segfault at 0 ip 0000010000000bbc (rpc fff8000100f41c28) sp 000007feffeb21c1 error 30001 in null-1.exe[10000000000+2000]
+[805779.343107] null-9.exe[75927]: segfault at 0 ip 0000010000000bbc (rpc fff8000100f41c28) sp 000007feffd021c1 error 30001 in null-9.exe[10000000000+2000]
+[805780.066904] null-1.exe[76211]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feff9941c1 error 30001 in null-1.exe[10000000000+2000]
+[805780.327693] null-9.exe[76292]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007fefff7c1c1 error 30001 in null-9.exe[10000000000+2000]
+[805780.996997] null-1.exe[76588]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffeca1c1 error 30001 in null-1.exe[10000000000+2000]
+[805781.317123] null-9.exe[76688]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffcb01c1 error 30001 in null-9.exe[10000000000+2000]
+[805781.950789] null-1.exe[76925]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feff9d21c1 error 30001 in null-1.exe[10000000000+2000]
+[805782.272084] null-9.exe[77056]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffba21c1 error 30001 in null-9.exe[10000000000+2000]
+[805784.210951] null-1.exe[77821]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffcf21c1 error 30001 in null-1.exe[10000000000+2000]
+[805784.496382] null-9.exe[77945]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffe401c1 error 30001 in null-9.exe[10000000000+2000]
+[805785.591844] null-1.exe[78365]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffea61c1 error 30001 in null-1.exe[10000000000+2000]
+[805785.929971] null-9.exe[78497]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feff9341c1 error 30001 in null-9.exe[10000000000+2000]
+[805786.532237] null-10.exe[78711]: segfault at 0 ip 0000010000000c48 (rpc 0000010000000c3c) sp 000007feffbae101 error 30001 in null-10.exe[10000000000+2000]
+[805787.466929] null-10.exe[79048]: segfault at 0 ip 0000010000000c18 (rpc 0000010000000c10) sp 000007feffbdc111 error 30001 in null-10.exe[10000000000+2000]
+[805788.460913] null-10.exe[79410]: segfault at 0 ip 0000010000000a28 (rpc 0000010000000a1c) sp 000007feffc9c101 error 30001 in null-10.exe[10000000000+2000]
+[805789.433864] null-10.exe[79797]: segfault at 0 ip 0000010000000a28 (rpc 0000010000000a1c) sp 000007feffdb0101 error 30001 in null-10.exe[10000000000+2000]
+[805790.412505] null-10.exe[80160]: segfault at 0 ip 0000010000000a2c (rpc 0000010000000a1c) sp 000007fefff8e111 error 30001 in null-10.exe[10000000000+2000]
+[805792.640721] null-10.exe[81015]: segfault at 0 ip 0000010000000a28 (rpc 0000010000000a1c) sp 000007feffc08101 error 30001 in null-10.exe[10000000000+2000]
+[805794.005053] null-10.exe[81528]: segfault at 0 ip 00000100000009e8 (rpc 00000100000009dc) sp 000007feff972101 error 30001 in null-10.exe[10000000000+2000]
+[805794.990144] null-11.exe[81867]: segfault at 0 ip 0000010000000bf8 (rpc 0000010000000bec) sp 000007feff8ec101 error 30001 in null-11.exe[10000000000+2000]
+[805795.965513] null-11.exe[82209]: segfault at 0 ip 0000010000000bd8 (rpc 0000010000000bd0) sp 000007feffdee111 error 30001 in null-11.exe[10000000000+2000]
+[805796.968224] null-11.exe[82560]: segfault at 0 ip 00000100000009e4 (rpc 00000100000009dc) sp 000007fefff5a111 error 30001 in null-11.exe[10000000000+2000]
+[805797.992008] null-11.exe[82873]: segfault at 0 ip 00000100000009e4 (rpc 00000100000009dc) sp 000007feffb0c111 error 30001 in null-11.exe[10000000000+2000]
+[805798.938887] null-11.exe[83175]: segfault at 0 ip 00000100000009e4 (rpc 00000100000009dc) sp 000007feff9d8111 error 30001 in null-11.exe[10000000000+2000]
+[805801.182782] null-11.exe[83925]: segfault at 0 ip 00000100000009e4 (rpc 00000100000009dc) sp 000007feffa6c111 error 30001 in null-11.exe[10000000000+2000]
+[805802.578598] null-11.exe[84362]: segfault at 0 ip 00000100000009e4 (rpc 00000100000009dc) sp 000007feff906111 error 30001 in null-11.exe[10000000000+2000]
+[805803.584823] null-2.exe[84697]: segfault at 0 ip 0000010000000c38 (rpc 0000010000000c2c) sp 000007feffe70101 error 30001 in null-2.exe[10000000000+2000]
+[805804.613584] null-2.exe[85033]: segfault at 0 ip 0000010000000c18 (rpc 0000010000000c10) sp 000007feffebe111 error 30001 in null-2.exe[10000000000+2000]
+[805805.553600] null-2.exe[85355]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007feffd0e111 error 30001 in null-2.exe[10000000000+2000]
+[805806.579328] null-2.exe[85701]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007feffaf2111 error 30001 in null-2.exe[10000000000+2000]
+[805807.517143] null-2.exe[86009]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007feff7fe111 error 30001 in null-2.exe[10000000000+2000]
+[805809.722248] null-2.exe[86749]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007fefff2a111 error 30001 in null-2.exe[10000000000+2000]
+[805811.141882] null-2.exe[87258]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007feff9f4111 error 30001 in null-2.exe[10000000000+2000]
+[805812.063290] null-3.exe[87576]: segfault at 0 ip 0000010000000c50 (rpc 0000010000000c44) sp 000007feff8c8101 error 30001 in null-3.exe[10000000000+2000]
+[805813.059007] null-3.exe[87889]: segfault at 0 ip 0000010000000c50 (rpc 0000010000000c48) sp 000007feffece111 error 30001 in null-3.exe[10000000000+2000]
+[805814.038932] null-3.exe[88199]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007fefff3c111 error 30001 in null-3.exe[10000000000+2000]
+[805815.003417] null-3.exe[88526]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007fefff96111 error 30001 in null-3.exe[10000000000+2000]
+[805815.965746] null-3.exe[88833]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007feffba6111 error 30001 in null-3.exe[10000000000+2000]
+[805818.177440] null-3.exe[89587]: segfault at 0 ip 0000010000000a24 (rpc 0000010000000a1c) sp 000007feffcbe111 error 30001 in null-3.exe[10000000000+2000]
+[805819.497828] pr59667.exe[90025]: segfault at 0 ip 0000010000001064 (rpc 0000010000001048) sp 000007feffdb00f1 error 30001 in pr59667.exe[10000000000+2000]
+[805819.565730] null-3.exe[90047]: segfault at 0 ip 00000100000009e4 (rpc 00000100000009dc) sp 000007feffe00111 error 30001 in null-3.exe[10000000000+2000]
+[805820.472407] pr59667.exe[90348]: segfault at 0 ip 0000010000000bc8 (rpc 0000010000000bb0) sp 000007feff84c111 error 30001 in pr59667.exe[10000000000+2000]
+[805820.512136] null-4.exe[90357]: segfault at 0 ip 0000010000000bd8 (rpc 0000010000000bcc) sp 000007feffdda101 error 30001 in null-4.exe[10000000000+2000]
+[805821.429794] pr59667.exe[90672]: segfault at 0 ip 00000100000009d4 (rpc 00000100000009bc) sp 000007feffbf8111 error 30001 in pr59667.exe[10000000000+2000]
+[805821.478547] null-4.exe[90690]: segfault at 8 ip 0000010000000bbc (rpc 0000010000000bb0) sp 000007feff86c111 error 30001 in null-4.exe[10000000000+2000]
+[805822.402468] pr59667.exe[90990]: segfault at 0 ip 00000100000009d4 (rpc 00000100000009bc) sp 000007feffc22111 error 30001 in pr59667.exe[10000000000+2000]
+[805822.481524] null-4.exe[91018]: segfault at 8 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feff924111 error 30001 in null-4.exe[10000000000+2000]
+[805823.346004] pr59667.exe[91313]: segfault at 0 ip 00000100000009d4 (rpc 00000100000009bc) sp 000007feffa4e111 error 30001 in pr59667.exe[10000000000+2000]
+[805823.492356] null-4.exe[91368]: segfault at 8 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feffc0c111 error 30001 in null-4.exe[10000000000+2000]
+[805824.528158] null-4.exe[91739]: segfault at 8 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feff83e111 error 30001 in null-4.exe[10000000000+2000]
+[805825.701814] pr59667.exe[92134]: segfault at 0 ip 00000100000009d4 (rpc 00000100000009bc) sp 000007fefff2c111 error 30001 in pr59667.exe[10000000000+2000]
+[805826.751480] null-4.exe[92469]: segfault at 8 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feffd22111 error 30001 in null-4.exe[10000000000+2000]
+[805827.157502] pr59667.exe[92594]: segfault at 0 ip 00000100000009d4 (rpc 00000100000009bc) sp 000007fefffdc111 error 30001 in pr59667.exe[10000000000+2000]
+[805828.154660] null-4.exe[92911]: segfault at 8 ip 00000100000009c4 (rpc 00000100000009bc) sp 000007feff8fa111 error 30001 in null-4.exe[10000000000+2000]
+[805829.130323] null-5.exe[93220]: segfault at 0 ip 0000010000000bd8 (rpc 0000010000000bcc) sp 000007feff93a101 error 30001 in null-5.exe[10000000000+2000]
+[805830.082755] null-5.exe[93531]: segfault at 0 ip 0000010000000bbc (rpc 0000010000000bb0) sp 000007feffd66111 error 30001 in null-5.exe[10000000000+2000]
+[805831.029230] null-5.exe[93831]: segfault at 0 ip 00000100000009d0 (rpc 00000100000009bc) sp 000007fefff86111 error 30001 in null-5.exe[10000000000+2000]
+[805832.007337] null-5.exe[94141]: segfault at 0 ip 00000100000009d0 (rpc 00000100000009bc) sp 000007feff812111 error 30001 in null-5.exe[10000000000+2000]
+[805832.961781] null-5.exe[94476]: segfault at 0 ip 00000100000009d0 (rpc 00000100000009bc) sp 000007feffb94111 error 30001 in null-5.exe[10000000000+2000]
+[805835.256320] null-5.exe[95256]: segfault at 0 ip 00000100000009d0 (rpc 00000100000009bc) sp 000007feff904111 error 30001 in null-5.exe[10000000000+2000]
+[805836.606332] null-5.exe[95712]: segfault at 0 ip 00000100000009d0 (rpc 00000100000009bc) sp 000007feffa9a111 error 30001 in null-5.exe[10000000000+2000]
+[805837.522150] null-6.exe[96035]: segfault at 0 ip 0000010000000bdc (rpc 0000010000000bcc) sp 000007feffd20101 error 30001 in null-6.exe[10000000000+2000]
+[805838.430051] null-6.exe[96349]: segfault at 0 ip 0000010000000bbc (rpc 0000010000000bb0) sp 000007feffd6c111 error 30001 in null-6.exe[10000000000+2000]
+[805839.412212] null-6.exe[96684]: segfault at 0 ip 00000100000009c8 (rpc 00000100000009bc) sp 000007feff9ae111 error 30001 in null-6.exe[10000000000+2000]
+[805840.474895] null-6.exe[96998]: segfault at 0 ip 00000100000009c8 (rpc 00000100000009bc) sp 000007feffb6e111 error 30001 in null-6.exe[10000000000+2000]
+[805841.402072] null-6.exe[97334]: segfault at 0 ip 00000100000009c8 (rpc 00000100000009bc) sp 000007fefffd8111 error 30001 in null-6.exe[10000000000+2000]
+[805843.650495] null-6.exe[98052]: segfault at 0 ip 00000100000009c8 (rpc 00000100000009bc) sp 000007feffd64111 error 30001 in null-6.exe[10000000000+2000]
+[805845.099652] null-6.exe[98544]: segfault at 0 ip 00000100000009c8 (rpc 00000100000009bc) sp 000007fefff30111 error 30001 in null-6.exe[10000000000+2000]
+[805846.010521] null-7.exe[98863]: segfault at 0 ip 0000010000000bec (rpc 0000010000000be4) sp 000007feffa36111 error 30001 in null-7.exe[10000000000+2000]
+[805846.984227] null-7.exe[99217]: segfault at 0 ip 0000010000000bc4 (rpc fff8000100f41c28) sp 000007feffd1c1c1 error 30001 in null-7.exe[10000000000+2000]
+[805847.995441] null-7.exe[99595]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffe2e1c1 error 30001 in null-7.exe[10000000000+2000]
+[805848.945490] null-7.exe[99936]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffcf41c1 error 30001 in null-7.exe[10000000000+2000]
+[805849.980462] null-7.exe[100278]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feff8c01c1 error 30001 in null-7.exe[10000000000+2000]
+[805852.186353] null-7.exe[101097]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffdee1c1 error 30001 in null-7.exe[10000000000+2000]
+[805853.630090] null-7.exe[101585]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feff9c21c1 error 30001 in null-7.exe[10000000000+2000]
+[805854.590559] null-8.exe[101886]: segfault at 0 ip 0000010000000bd8 (rpc 0000010000000bcc) sp 000007feffa26101 error 30001 in null-8.exe[10000000000+2000]
+[805855.580844] null-8.exe[102197]: segfault at 0 ip 0000010000000bbc (rpc fff8000100f41c28) sp 000007feffca81c1 error 30001 in null-8.exe[10000000000+2000]
+[805856.537599] null-8.exe[102499]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffd3c1c1 error 30001 in null-8.exe[10000000000+2000]
+[805857.498070] null-8.exe[102788]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffb421c1 error 30001 in null-8.exe[10000000000+2000]
+[805858.454270] null-8.exe[103080]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007fefffd81c1 error 30001 in null-8.exe[10000000000+2000]
+[805860.649952] null-8.exe[103769]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffd9c1c1 error 30001 in null-8.exe[10000000000+2000]
+[805862.030930] null-8.exe[104198]: segfault at 0 ip 00000100000009c8 (rpc fff8000100f41c28) sp 000007feffa881c1 error 30001 in null-8.exe[10000000000+2000]
