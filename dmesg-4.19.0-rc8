@@ -1,0 +1,320 @@
+[    0.000017] PROMLIB: Sun IEEE Boot Prom 'OBP 4.38.12 2018/03/28 14:54'
+[    0.000028] PROMLIB: Root node compatible: sun4v
+[    0.000073] Linux version 4.19.0-rc8 (mator@ttip) (gcc version 8.2.0 (Debian 8.2.0-7)) #735 SMP Mon Oct 15 10:13:51 MSK 2018
+[    0.000363] bootconsole [earlyprom0] enabled
+[    0.000410] ARCH: SUN4V
+[    0.000458] Ethernet address: 00:14:4f:fa:06:f2
+[    0.000509] MM: PAGE_OFFSET is 0xfff8000000000000 (max_phys_bits == 47)
+[    0.000573] MM: VMALLOC [0x0000000100000000 --> 0x0006000000000000]
+[    0.000634] MM: VMEMMAP [0x0006000000000000 --> 0x000c000000000000]
+[    0.013078] Kernel: Using 5 locked TLB entries for main kernel image.
+[    0.013146] Remapping the kernel... 
+[    0.013174] done.
+[    0.042483] OF stdout device is: /virtual-devices@100/console@1
+[    0.042557] PROM: Built device tree with 74449 bytes of memory.
+[    0.042621] MDESC: Size is 30480 bytes.
+[    0.042729] PLATFORM: banner-name [SPARC T5-2]
+[    0.042779] PLATFORM: name [ORCL,SPARC-T5-2]
+[    0.042825] PLATFORM: hostid [84fa06f2]
+[    0.042866] PLATFORM: serial# [0035260e]
+[    0.042909] PLATFORM: stick-frequency [3b9aca00]
+[    0.042958] PLATFORM: mac-address [144ffa06f2]
+[    0.043005] PLATFORM: watchdog-resolution [1000 ms]
+[    0.043055] PLATFORM: watchdog-max-timeout [31536000000 ms]
+[    0.043111] PLATFORM: max-cpus [1024]
+[    0.043203] Top of RAM: 0x24af948000, Total RAM: 0x87f384000
+[    0.043263] Memory hole size: 115461MB
+[    0.047469] Allocated 40960 bytes for kernel page tables.
+[    0.047556] Zone ranges:
+[    0.047597]   Normal   [mem 0x0000000030400000-0x00000024af947fff]
+[    0.047664] Movable zone start for each node
+[    0.047710] Early memory node ranges
+[    0.047750]   node   0: [mem 0x0000000030400000-0x000000006febffff]
+[    0.047812]   node   0: [mem 0x000000006ff40000-0x000000006ff47fff]
+[    0.047874]   node   0: [mem 0x0000000070000000-0x000000042fffffff]
+[    0.047936]   node   0: [mem 0x0000002030000000-0x00000024af8b3fff]
+[    0.047997]   node   0: [mem 0x00000024af940000-0x00000024af947fff]
+[    0.048069] Initmem setup node 0 [mem 0x0000000030400000-0x00000024af947fff]
+[    0.048139] On node 0 totalpages: 4454850
+[    0.048146]   Normal zone: 39154 pages used for memmap
+[    0.048151]   Normal zone: 0 pages reserved
+[    0.048156]   Normal zone: 4454850 pages, LIFO batch:31
+[    0.244340] Booting Linux...
+[    0.244425] CPU CAPS: [flush,stbar,swap,muldiv,v9,blkinit,n2,mul32]
+[    0.244537] CPU CAPS: [div32,v8plus,popc,vis,vis2,ASIBlkInit,fmaf,vis3]
+[    0.244642] CPU CAPS: [hpc,ima,pause,cbcond,aes,des,kasumi,camellia]
+[    0.244744] CPU CAPS: [md5,sha1,sha256,sha512,mpmul,montmul,montsqr,crc32c]
+[    0.287043] percpu: Embedded 12 pages/cpu @(____ptrval____) s57352 r8192 d32760 u131072
+[    0.287277] pcpu-alloc: s57352 r8192 d32760 u131072 alloc=1*4194304
+[    0.287287] pcpu-alloc: [0] 000 001 002 003 004 005 006 007 008 009 010 011 012 013 014 015 016 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 
+[    0.287445] pcpu-alloc: [0] 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 
+[    0.287601] pcpu-alloc: [0] 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 
+[    0.287757] pcpu-alloc: [0] 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 
+[    0.287914] pcpu-alloc: [0] 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 
+[    0.288070] pcpu-alloc: [0] 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 
+[    0.288226] pcpu-alloc: [0] 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 
+[    0.288383] pcpu-alloc: [0] 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 
+[    0.288942] SUN4V: Mondo queue sizes [cpu(131072) dev(16384) r(8192) nr(256)]
+[    0.289230] Built 1 zonelists, mobility grouping on.  Total pages: 4415696
+[    0.289317] Kernel command line: BOOT_IMAGE=/vmlinuz-4.19.0-rc8 root=/dev/vdiska2 ro zswap.enabled=1 elevator=deadline
+[    0.291586] log_buf_len individual max cpu contribution: 4096 bytes
+[    0.291651] log_buf_len total cpu_extra contributions: 1044480 bytes
+[    0.291713] log_buf_len min size: 131072 bytes
+[    0.292078] log_buf_len: 2097152 bytes
+[    0.292124] early log buf free: 126320(96%)
+[    0.298442] Dentry cache hash table entries: 8388608 (order: 13, 67108864 bytes)
+[    0.301678] Inode-cache hash table entries: 4194304 (order: 12, 33554432 bytes)
+[    0.301749] Sorting __ex_table...
+[    0.387124] Memory: 35127128K/35638800K available (6102K kernel code, 858K rwdata, 1808K rodata, 824K init, 7779K bss, 511672K reserved, 0K cma-reserved)
+[    0.387434] kmemleak: Kernel memory leak detector disabled
+[    0.388224] ftrace: allocating 18664 entries in 37 pages
+[    0.401743] Running RCU self tests
+[    0.401805] rcu: Hierarchical RCU implementation.
+[    0.401858] rcu: 	RCU event tracing is enabled.
+[    0.401907] rcu: 	RCU lockdep checking is enabled.
+[    0.401956] 	Tasks RCU enabled.
+[    0.407132] NR_IRQS: 2048, nr_irqs: 2048, preallocated irqs: 1
+[    0.407214] SUN4V: Using IRQ API major 3, cookie only virqs enabled
+[    0.411224] clocksource: stick: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.411354] clocksource: mult[800000] shift[23]
+[    0.411403] clockevent: mult[80000000] shift[31]
+[    0.414186] Console: colour dummy device 80x25
+[    0.414248] console [tty0] enabled
+[    0.414313] bootconsole [earlyprom0] disabled
+[    0.414387] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+[    0.414430] ... MAX_LOCKDEP_SUBCLASSES:  8
+[    0.414456] ... MAX_LOCK_DEPTH:          48
+[    0.414483] ... MAX_LOCKDEP_KEYS:        8191
+[    0.414511] ... CLASSHASH_SIZE:          4096
+[    0.414538] ... MAX_LOCKDEP_ENTRIES:     16384
+[    0.414566] ... MAX_LOCKDEP_CHAINS:      32768
+[    0.414594] ... CHAINHASH_SIZE:          16384
+[    0.414622]  memory used by lock dependency info: 5087 kB
+[    0.414654]  per task-struct memory footprint: 1920 bytes
+[    0.414861] kmemleak: Early log buffer exceeded (24667), please increase DEBUG_KMEMLEAK_EARLY_LOG_SIZE
+[    0.561712] Calibrating delay using timer specific routine.. 2005.43 BogoMIPS (lpj=10027173)
+[    0.561778] pid_max: default: 262144 minimum: 2048
+[    0.562861] Security Framework initialized
+[    0.562897] AppArmor: AppArmor disabled by boot time parameter
+[    0.563461] Mount-cache hash table entries: 131072 (order: 7, 1048576 bytes)
+[    0.563617] Mountpoint-cache hash table entries: 131072 (order: 7, 1048576 bytes)
+[    0.568243] rcu: Hierarchical SRCU implementation.
+[    0.590649] smp: Bringing up secondary CPUs ...
+[    0.645094] smp: Brought up 1 node, 24 CPUs
+[    0.649049] devtmpfs: initialized
+[    0.654554] Performance events: 
+[    0.654591] Testing NMI watchdog ... 
+[    0.854690] OK.
+[    0.854832] Supported PMU type is 'niagara5'
+[    0.855161] random: get_random_u32 called from bucket_table_alloc.isra.4+0x140/0x1c0 with crng_init=0
+[    0.856003] ldc.c:v1.1 (July 22, 2008)
+[    0.859423] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.859502] futex hash table entries: 65536 (order: 10, 8388608 bytes)
+[    0.869344] NET: Registered protocol family 16
+[    0.878350] VIO: Adding device channel-devices (tx_ino = ffffffffffffffff, rx_ino = ffffffffffffffff)
+[    0.878569] VIO: Adding device vnet-port-0-0 (tx_ino = 0, rx_ino = 1)
+[    0.878788] VIO: Adding device vnet-port-0-1 (tx_ino = 2, rx_ino = 3)
+[    0.878971] VIO: Adding device vnet-port-0-2 (tx_ino = 4, rx_ino = 5)
+[    0.879159] VIO: Adding device vnet-port-0-3 (tx_ino = 6, rx_ino = 7)
+[    0.879348] VIO: Adding device vdc-port-3-0 (tx_ino = 8, rx_ino = 9)
+[    0.879529] VIO: Adding device vdc-port-2-0 (tx_ino = a, rx_ino = b)
+[    0.879709] VIO: Adding device vdc-port-1-0 (tx_ino = c, rx_ino = d)
+[    0.879901] VIO: Adding device vdc-port-0-0 (tx_ino = e, rx_ino = f)
+[    0.880085] VIO: Adding device vlds-port-0-0 (tx_ino = 10, rx_ino = 11)
+[    0.880274] VIO: Adding device domain-services-port-0 (tx_ino = 10, rx_ino = 11)
+[    0.880654] audit: initializing netlink subsys (disabled)
+[    0.880983] audit: type=2000 audit(0.460:1): state=initialized audit_enabled=0 res=1
+[    0.937220] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.937272] HugeTLB registered 8.00 MiB page size, pre-allocated 0 pages
+[    0.937313] HugeTLB registered 256 MiB page size, pre-allocated 0 pages
+[    0.937353] HugeTLB registered 2.00 GiB page size, pre-allocated 0 pages
+[    0.948664] SUN4V: Reboot data supported (maj=1,min=0).
+[    0.949080] ds.c:v1.0 (Jul 11, 2007)
+[    0.949466] ds-0: ds_conn_reset() from send_events.isra.3
+[    0.950901] clocksource: Switched to clocksource stick
+[    1.124670] VFS: Disk quotas dquot_6.6.0
+[    1.124899] VFS: Dquot-cache hash table entries: 1024 (order 0, 8192 bytes)
+[    1.143261] NET: Registered protocol family 2
+[    1.148025] tcp_listen_portaddr_hash hash table entries: 32768 (order: 8, 2359296 bytes)
+[    1.151389] TCP established hash table entries: 524288 (order: 9, 4194304 bytes)
+[    1.153404] TCP bind hash table entries: 65536 (order: 9, 4194304 bytes)
+[    1.159065] TCP: Hash tables configured (established 524288 bind 65536)
+[    1.165560] UDP hash table entries: 32768 (order: 9, 5242880 bytes)
+[    1.173119] UDP-Lite hash table entries: 32768 (order: 9, 5242880 bytes)
+[    1.187241] NET: Registered protocol family 1
+[    1.187971] Unpacking initramfs...
+[    1.617964] Freeing initrd memory: 16648K
+[    1.660803] workingset: timestamp_bits=46 max_order=23 bucket_order=0
+[    1.662081] zbud: loaded
+[    1.714882] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    1.716521] io scheduler noop registered
+[    1.716553] io scheduler deadline registered (default)
+[    1.717260] io scheduler cfq registered
+[    1.717290] io scheduler mq-deadline registered (default)
+[    1.717325] io scheduler kyber registered
+[    1.720526] f029b788: ttyS0 at I/O 0x0 (irq = 1, base_baud = 115200) is a SUN4V HCONS
+[    1.721405] console [ttyHV0] enabled
+[    1.724602] sunvdc.c:v1.2 (November 24, 2014)
+[    1.727132] sunvdc: Virtual CDROM vdiskd
+[    1.727182] sunvdc: vdiskd: 403160 sectors (196 MB) protocol 1.2
+[    1.728258]  vdiskd: vdiskd1 vdiskd2 vdiskd3 vdiskd4 vdiskd5 vdiskd6 vdiskd7
+[    1.740001] sunvdc: Virtual Hard disk vdiskc
+[    1.740039] sunvdc: vdiskc: 104857600 sectors (51200 MB) protocol 1.2
+[    1.746624] sunvdc: Virtual Hard disk vdiskb
+[    1.746659] sunvdc: vdiskb: 62914560 sectors (30720 MB) protocol 1.2
+[    1.751489]  vdiskb: vdiskb1
+[    1.758079] sunvdc: Virtual Hard disk vdiska
+[    1.758114] sunvdc: vdiska: 31457280 sectors (15360 MB) protocol 1.2
+[    1.758795]  vdiska: vdiska1 vdiska2 vdiska3 vdiska4
+[    1.761950] sunvnet: sunvnet 2.0 (February 3, 2017)
+[    1.765396] vnet_port vnet-port-0-0 eth0: Sun LDOM vnet 00:14:4f:f8:12:a3
+[    1.765945] sunvnet: eth0: PORT ( remote-mac 00:14:4f:fa:f3:f0 switch-port )
+[    1.767227] sunvnet: eth0: PORT ( remote-mac 00:14:4f:f8:e5:f3 )
+[    1.768500] sunvnet: eth0: PORT ( remote-mac 00:14:4f:f9:b4:97 )
+[    1.769778] sunvnet: eth0: PORT ( remote-mac 00:14:4f:f9:8b:83 )
+[    1.770745] mousedev: PS/2 mouse device common for all mice
+[    1.771914] rtc-sun4v rtc-sun4v: rtc core: registered sun4v as rtc0
+[    1.773057] device-mapper: uevent: version 1.0.3
+[    1.774131] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    1.775653] NET: Registered protocol family 17
+[    1.776837] registered taskstats version 1
+[    1.779758] zswap: loaded using pool lzo/zbud
+[    1.800052] Key type big_key registered
+[    1.800995] rtc-sun4v rtc-sun4v: setting system clock to 2018-10-15 07:21:42 UTC (1539588102)
+[    1.805405] This architecture does not have kernel memory protection.
+[    1.805448] Run /init as init process
+[    2.676056] crc32c_sparc64: Using sparc64 crc32c opcode optimized CRC32C implementation
+[    3.140876] raid6: int64x1  gen()  2787 MB/s
+[    3.310858] raid6: int64x1  xor()  1655 MB/s
+[    3.480882] raid6: int64x2  gen()  2880 MB/s
+[    3.650848] raid6: int64x2  xor()  1999 MB/s
+[    3.820871] raid6: int64x4  gen()  3467 MB/s
+[    3.990875] raid6: int64x4  xor()  1987 MB/s
+[    4.160859] raid6: int64x8  gen()  2175 MB/s
+[    4.330882] raid6: int64x8  xor()  1566 MB/s
+[    4.330928] raid6: using algorithm int64x4 gen() 3467 MB/s
+[    4.330964] raid6: .... xor() 1987 MB/s, rmw enabled
+[    4.330998] raid6: using intx1 recovery algorithm
+[    4.332281] async_tx: api initialized (async)
+[    4.333104] xor: automatically using best checksumming function   Niagara   
+[    4.615933] random: fast init done
+[    4.623712] EXT4-fs (vdiska2): mounted filesystem with ordered data mode. Opts: (null)
+[    5.975404] NET: Registered protocol family 10
+[    5.987597] Segment Routing with IPv6
+[    6.049290] systemd[1]: systemd 239 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    6.049953] systemd[1]: Detected architecture sparc64.
+[    6.107514] systemd[1]: Set hostname to <ttip>.
+[    8.293709] random: systemd: uninitialized urandom read (16 bytes read)
+[    8.295657] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    8.296514] random: systemd: uninitialized urandom read (16 bytes read)
+[    8.297145] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    8.297610] random: systemd: uninitialized urandom read (16 bytes read)
+[    8.298717] systemd[1]: Listening on Journal Socket.
+[    8.315715] systemd[1]: Mounting Kernel Debug File System...
+[    8.346883] systemd[1]: Listening on LVM2 metadata daemon socket.
+[    8.348507] systemd[1]: Listening on udev Control Socket.
+[    8.353848] systemd[1]: Created slice system-openvpn\x2dclient.slice.
+[    8.554249] EXT4-fs (vdiska2): re-mounted. Opts: errors=remount-ro
+[    8.865454] systemd-journald[388]: Received request to flush runtime journal from PID 1
+[    9.197378] random: crng init done
+[    9.197579] random: 7 urandom warning(s) missed due to ratelimiting
+[   10.497174] sha1_sparc64: Using sparc64 sha1 opcode optimized SHA-1 implementation
+[   10.559172] sha256_sparc64: Using sparc64 sha256 opcode optimized SHA-256/SHA-224 implementation
+[   10.608169] n2rng v0.3 (Jan 7, 2017)
+[   10.608290] n2rng f029b104: Registered RNG HVAPI major 2 minor 0
+[   10.608399] n2rng f029b104: Found multi-unit-capable RNG, units: 2
+[   10.608817] sha512_sparc64: Using sparc64 sha512 opcode optimized SHA-512/SHA-384 implementation
+[   10.610140] n2rng f029b104: RNG ready
+[   10.622464] md5_sparc64: Using sparc64 md5 opcode optimized MD5 implementation
+[   10.648230] aes_sparc64: Using sparc64 aes opcodes optimized AES implementation
+[   10.686518] des_sparc64: Using sparc64 des opcodes optimized DES implementation
+[   10.710425] camellia_sparc64: Using sparc64 camellia opcodes optimized CAMELLIA implementation
+[   11.423190] Btrfs loaded, crc32c=crc32c-sparc64, debug=on, assert=on
+[   11.424674] BTRFS: selftest: sectorsize: 8192  nodesize: 8192
+[   11.424729] BTRFS: selftest: running btrfs free space cache tests
+[   11.425523] BTRFS: selftest: running extent only tests
+[   11.425628] BTRFS: selftest: running bitmap only tests
+[   11.425760] BTRFS: selftest: running bitmap and extent tests
+[   11.425939] BTRFS: selftest: running space stealing from bitmap to extent
+[   11.427599] BTRFS: selftest: free space cache tests finished
+[   11.427638] BTRFS: selftest: running extent buffer operation tests
+[   11.427677] BTRFS: selftest: running btrfs_split_item tests
+[   11.429562] BTRFS: selftest: running extent I/O tests
+[   11.429598] BTRFS: selftest: running find delalloc tests
+[   11.685672] BTRFS: selftest: running extent buffer bitmap tests
+[   11.733450] BTRFS: selftest: extent I/O tests finished
+[   11.733503] BTRFS: selftest: running btrfs_get_extent tests
+[   11.735759] BTRFS: selftest: running hole first btrfs_get_extent test
+[   11.737674] BTRFS: selftest: running outstanding_extents tests
+[   11.741415] BTRFS: selftest: running qgroup tests
+[   11.741472] BTRFS: selftest: qgroup basic add
+[   11.741833] BTRFS: selftest: qgroup multiple refs test
+[   11.745487] BTRFS: selftest: running free space tree tests
+[   11.838109] BTRFS: selftest: sectorsize: 8192  nodesize: 16384
+[   11.838164] BTRFS: selftest: running btrfs free space cache tests
+[   11.838747] BTRFS: selftest: running extent only tests
+[   11.838808] BTRFS: selftest: running bitmap only tests
+[   11.838927] BTRFS: selftest: running bitmap and extent tests
+[   11.839104] BTRFS: selftest: running space stealing from bitmap to extent
+[   11.840750] BTRFS: selftest: free space cache tests finished
+[   11.840792] BTRFS: selftest: running extent buffer operation tests
+[   11.840895] BTRFS: selftest: running btrfs_split_item tests
+[   11.842736] BTRFS: selftest: running extent I/O tests
+[   11.842777] BTRFS: selftest: running find delalloc tests
+[   11.991051] SGI XFS with ACLs, security attributes, debug enabled
+[   12.023749] XFS (dm-0): Mounting V5 Filesystem
+[   12.099775] BTRFS: selftest: running extent buffer bitmap tests
+[   12.146341] BTRFS: selftest: extent I/O tests finished
+[   12.146389] BTRFS: selftest: running btrfs_get_extent tests
+[   12.148642] BTRFS: selftest: running hole first btrfs_get_extent test
+[   12.150512] BTRFS: selftest: running outstanding_extents tests
+[   12.153241] BTRFS: selftest: running qgroup tests
+[   12.153276] BTRFS: selftest: qgroup basic add
+[   12.153454] BTRFS: selftest: qgroup multiple refs test
+[   12.156303] BTRFS: selftest: running free space tree tests
+[   12.245615] BTRFS: selftest: sectorsize: 8192  nodesize: 32768
+[   12.245672] BTRFS: selftest: running btrfs free space cache tests
+[   12.246258] BTRFS: selftest: running extent only tests
+[   12.246320] BTRFS: selftest: running bitmap only tests
+[   12.246434] BTRFS: selftest: running bitmap and extent tests
+[   12.246612] BTRFS: selftest: running space stealing from bitmap to extent
+[   12.248242] BTRFS: selftest: free space cache tests finished
+[   12.248280] BTRFS: selftest: running extent buffer operation tests
+[   12.248319] BTRFS: selftest: running btrfs_split_item tests
+[   12.250124] BTRFS: selftest: running extent I/O tests
+[   12.250159] BTRFS: selftest: running find delalloc tests
+[   12.374518] XFS (dm-0): Ending clean mount
+[   12.507029] BTRFS: selftest: running extent buffer bitmap tests
+[   12.553824] BTRFS: selftest: extent I/O tests finished
+[   12.553867] BTRFS: selftest: running btrfs_get_extent tests
+[   12.556058] BTRFS: selftest: running hole first btrfs_get_extent test
+[   12.557932] BTRFS: selftest: running outstanding_extents tests
+[   12.560775] BTRFS: selftest: running qgroup tests
+[   12.560874] BTRFS: selftest: qgroup basic add
+[   12.561063] BTRFS: selftest: qgroup multiple refs test
+[   12.563832] BTRFS: selftest: running free space tree tests
+[   12.653367] BTRFS: selftest: sectorsize: 8192  nodesize: 65536
+[   12.653420] BTRFS: selftest: running btrfs free space cache tests
+[   12.654013] BTRFS: selftest: running extent only tests
+[   12.654099] BTRFS: selftest: running bitmap only tests
+[   12.654221] BTRFS: selftest: running bitmap and extent tests
+[   12.654399] BTRFS: selftest: running space stealing from bitmap to extent
+[   12.656034] BTRFS: selftest: free space cache tests finished
+[   12.656072] BTRFS: selftest: running extent buffer operation tests
+[   12.656110] BTRFS: selftest: running btrfs_split_item tests
+[   12.657932] BTRFS: selftest: running extent I/O tests
+[   12.657967] BTRFS: selftest: running find delalloc tests
+[   12.911033] BTRFS: selftest: running extent buffer bitmap tests
+[   12.957540] BTRFS: selftest: extent I/O tests finished
+[   12.957584] BTRFS: selftest: running btrfs_get_extent tests
+[   12.959798] BTRFS: selftest: running hole first btrfs_get_extent test
+[   12.961727] BTRFS: selftest: running outstanding_extents tests
+[   12.964369] BTRFS: selftest: running qgroup tests
+[   12.964403] BTRFS: selftest: qgroup basic add
+[   12.964575] BTRFS: selftest: qgroup multiple refs test
+[   12.967356] BTRFS: selftest: running free space tree tests
+[   13.056122] BTRFS: selftest: running extent_map tests
+[   13.162639] BTRFS: device fsid 03ee75b3-c6e9-457b-a97d-c1dd4acd7044 devid 1 transid 11186 /dev/vdiskb1
+[   14.158780] Adding 787176k swap on /dev/vdiska4.  Priority:-2 extents:1 across:787176k FS
+[   14.427436] EXT4-fs (vdiska1): mounting ext3 file system using the ext4 subsystem
+[   14.438495] EXT4-fs (vdiska1): mounted filesystem with ordered data mode. Opts: (null)
