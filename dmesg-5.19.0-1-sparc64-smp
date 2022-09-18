@@ -1,0 +1,429 @@
+[    0.000011] PROMLIB: Sun IEEE Boot Prom 'OBP 4.38.17 2019/01/25 08:22'
+[    0.000023] PROMLIB: Root node compatible: sun4v
+[    0.000062] Linux version 5.19.0-1-sparc64-smp (debian-kernel@lists.debian.org) (gcc-11 (Debian 11.3.0-5) 11.3.0, GNU ld (GNU Binutils for Debian) 2.38.90.20220713) #1 SMP Debian 5.19.6-1 (2022-09-01)
+[    0.000364] printk: bootconsole [earlyprom0] enabled
+[    0.000415] ARCH: SUN4V
+[    0.000454] Ethernet address: 00:14:4f:fa:06:f2
+[    0.000502] MM: PAGE_OFFSET is 0xfff8000000000000 (max_phys_bits == 47)
+[    0.000561] MM: VMALLOC [0x0000000100000000 --> 0x0006000000000000]
+[    0.000619] MM: VMEMMAP [0x0006000000000000 --> 0x000c000000000000]
+[    0.011588] Kernel: Using 4 locked TLB entries for main kernel image.
+[    0.011658] Remapping the kernel... 
+[    0.011677] done.
+[    0.029873] OF stdout device is: /virtual-devices@100/console@1
+[    0.029939] PROM: Built device tree with 60305 bytes of memory.
+[    0.029999] MDESC: Size is 24208 bytes.
+[    0.030090] PLATFORM: banner-name [SPARC T5-2]
+[    0.030136] PLATFORM: name [ORCL,SPARC-T5-2]
+[    0.030175] PLATFORM: hostid [84fa06f2]
+[    0.030214] PLATFORM: serial# [0035260e]
+[    0.030250] PLATFORM: stick-frequency [3b9aca00]
+[    0.030293] PLATFORM: mac-address [144ffa06f2]
+[    0.030334] PLATFORM: watchdog-resolution [1000 ms]
+[    0.030379] PLATFORM: watchdog-max-timeout [31536000000 ms]
+[    0.030429] PLATFORM: max-cpus [1024]
+[    0.030519] Top of RAM: 0x42f948000, Total RAM: 0x3ff3a4000
+[    0.030575] Memory hole size: 773MB
+[    0.032497] Allocated 24576 bytes for kernel page tables.
+[    0.032575] Zone ranges:
+[    0.032610]   Normal   [mem 0x0000000030400000-0x000000042f947fff]
+[    0.032669] Movable zone start for each node
+[    0.032711] Early memory node ranges
+[    0.032744]   node   0: [mem 0x0000000030400000-0x000000006febffff]
+[    0.032803]   node   0: [mem 0x000000006ff40000-0x000000006ff65fff]
+[    0.032859]   node   0: [mem 0x0000000070000000-0x000000042f8b5fff]
+[    0.032917]   node   0: [mem 0x000000042f940000-0x000000042f947fff]
+[    0.032974] Initmem setup node 0 [mem 0x0000000030400000-0x000000042f947fff]
+[    0.043421] On node 0, zone Normal: 98816 pages in unavailable ranges
+[    0.043441] On node 0, zone Normal: 64 pages in unavailable ranges
+[    0.044913] On node 0, zone Normal: 77 pages in unavailable ranges
+[    0.044981] On node 0, zone Normal: 69 pages in unavailable ranges
+[    0.046920] On node 0, zone Normal: 33628 pages in unavailable ranges
+[    0.046984] Booting Linux...
+[    0.047085] CPU CAPS: [flush,stbar,swap,muldiv,v9,blkinit,n2,mul32]
+[    0.047159] CPU CAPS: [div32,v8plus,popc,vis,vis2,ASIBlkInit,fmaf,vis3]
+[    0.047234] CPU CAPS: [hpc,ima,pause,cbcond,aes,des,kasumi,camellia]
+[    0.047304] CPU CAPS: [md5,sha1,sha256,sha512,mpmul,montmul,montsqr,crc32c]
+[    0.089778] percpu: Embedded 18 pages/cpu s102824 r8192 d36440 u262144
+[    0.090021] pcpu-alloc: s102824 r8192 d36440 u262144 alloc=1*4194304
+[    0.090029] pcpu-alloc: [0] 000 001 002 003 004 005 006 007 008 009 010 011 012 013 014 015 
+[    0.090062] pcpu-alloc: [0] 016 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 
+[    0.090094] pcpu-alloc: [0] 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 
+[    0.090126] pcpu-alloc: [0] 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 
+[    0.090158] pcpu-alloc: [0] 064 065 066 067 068 069 070 071 072 073 074 075 076 077 078 079 
+[    0.090189] pcpu-alloc: [0] 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 
+[    0.090221] pcpu-alloc: [0] 096 097 098 099 100 101 102 103 104 105 106 107 108 109 110 111 
+[    0.090253] pcpu-alloc: [0] 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 
+[    0.090284] pcpu-alloc: [0] 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 
+[    0.090316] pcpu-alloc: [0] 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 
+[    0.090347] pcpu-alloc: [0] 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 
+[    0.090379] pcpu-alloc: [0] 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 
+[    0.090410] pcpu-alloc: [0] 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 
+[    0.090441] pcpu-alloc: [0] 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 
+[    0.090473] pcpu-alloc: [0] 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 
+[    0.090504] pcpu-alloc: [0] 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 
+[    0.090929] SUN4V: Mondo queue sizes [cpu(131072) dev(16384) r(8192) nr(256)]
+[    0.091182] Built 1 zonelists, mobility grouping on.  Total pages: 2077150
+[    0.091249] Kernel command line: BOOT_IMAGE=/vmlinux-5.19.0-1-sparc64-smp root=/dev/vdiska2 ro
+[    0.093176] Unknown kernel command line parameters "BOOT_IMAGE=/vmlinux-5.19.0-1-sparc64-smp", will be passed to user space.
+[    0.093291] printk: log_buf_len individual max cpu contribution: 4096 bytes
+[    0.093352] printk: log_buf_len total cpu_extra contributions: 1044480 bytes
+[    0.093414] printk: log_buf_len min size: 131072 bytes
+[    0.095212] printk: log_buf_len: 2097152 bytes
+[    0.095256] printk: early log buf free: 126360(96%)
+[    0.096903] Dentry cache hash table entries: 2097152 (order: 11, 16777216 bytes, linear)
+[    0.097802] Inode-cache hash table entries: 1048576 (order: 10, 8388608 bytes, linear)
+[    0.097873] Sorting __ex_table...
+[    0.098127] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.102377] Memory: 1274552K/16764560K available (8999K kernel code, 1429K rwdata, 2512K rodata, 680K init, 589K bss, 274096K reserved, 0K cma-reserved)
+[    0.104279] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=256, Nodes=1
+[    0.104713] ftrace: allocating 28928 entries in 57 pages
+[    0.116213] ftrace: allocated 57 pages with 4 groups
+[    0.116463] trace event string verifier disabled
+[    0.118613] rcu: Hierarchical RCU implementation.
+[    0.118663] 	Rude variant of Tasks RCU enabled.
+[    0.118705] 	Tracing variant of Tasks RCU enabled.
+[    0.118751] rcu: RCU calculated value of scheduler-enlistment delay is 26 jiffies.
+[    0.123245] NR_IRQS: 2048, nr_irqs: 2048, preallocated irqs: 1
+[    0.123327] SUN4V: Using IRQ API major 3, cookie only virqs enabled
+[    0.125813] rcu: srcu_init: Setting srcu_struct sizes to big.
+[    0.125918] clocksource: stick: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.126013] clocksource: mult[800000] shift[23]
+[    0.127058] clockevent: mult[80000000] shift[31]
+[    0.127454] Console: colour dummy device 80x25
+[    0.127502] printk: console [tty0] enabled
+[    0.127544] printk: bootconsole [earlyprom0] disabled
+[    0.207178] Calibrating delay using timer specific routine.. 2002.25 BogoMIPS (lpj=4004500)
+[    0.207205] pid_max: default: 262144 minimum: 2048
+[    0.207568] LSM: Security Framework initializing
+[    0.207680] landlock: Up and running.
+[    0.207685] Yama: disabled by default; enable with sysctl kernel.yama.*
+[    0.207770] AppArmor: AppArmor initialized
+[    0.207778] TOMOYO Linux initialized
+[    0.207793] LSM support for eBPF active
+[    0.208022] Mount-cache hash table entries: 32768 (order: 5, 262144 bytes, linear)
+[    0.208059] Mountpoint-cache hash table entries: 32768 (order: 5, 262144 bytes, linear)
+[    0.209602] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.209661] cblist_init_generic: Setting shift to 8 and lim to 1.
+[    0.209744] cblist_init_generic: Setting shift to 8 and lim to 1.
+[    0.209808] rcu: Hierarchical SRCU implementation.
+[    0.209814] rcu: 	Max phase no-delay instances is 1000.
+[    0.213153] smp: Bringing up secondary CPUs ...
+[    0.218521] smp: Brought up 1 node, 16 CPUs
+[    0.301517] node 0 deferred pages initialised in 84ms
+[    0.302554] devtmpfs: initialized
+[    0.303333] Performance events: 
+[    0.303356] Testing NMI watchdog ... 
+[    0.383454] WARNING: CPU#0: NMI appears to be stuck (0->0)!
+[    0.383477] Please report this to bugzilla.kernel.org,
+[    0.383494] and attach the output of the 'dmesg' command.
+
+[    0.383525] WARNING: CPU#1: NMI appears to be stuck (0->0)!
+[    0.383545] Please report this to bugzilla.kernel.org,
+[    0.383562] and attach the output of the 'dmesg' command.
+
+[    0.383593] WARNING: CPU#2: NMI appears to be stuck (0->0)!
+[    0.383613] Please report this to bugzilla.kernel.org,
+[    0.383642] and attach the output of the 'dmesg' command.
+
+[    0.383672] WARNING: CPU#3: NMI appears to be stuck (0->0)!
+[    0.383692] Please report this to bugzilla.kernel.org,
+[    0.383709] and attach the output of the 'dmesg' command.
+
+[    0.383739] WARNING: CPU#4: NMI appears to be stuck (0->0)!
+[    0.383758] Please report this to bugzilla.kernel.org,
+[    0.383775] and attach the output of the 'dmesg' command.
+
+[    0.383805] WARNING: CPU#5: NMI appears to be stuck (0->0)!
+[    0.383825] Please report this to bugzilla.kernel.org,
+[    0.383841] and attach the output of the 'dmesg' command.
+
+[    0.383870] WARNING: CPU#6: NMI appears to be stuck (0->0)!
+[    0.383890] Please report this to bugzilla.kernel.org,
+[    0.383907] and attach the output of the 'dmesg' command.
+
+[    0.383936] WARNING: CPU#7: NMI appears to be stuck (0->0)!
+[    0.383956] Please report this to bugzilla.kernel.org,
+[    0.383972] and attach the output of the 'dmesg' command.
+
+[    0.384002] WARNING: CPU#8: NMI appears to be stuck (0->0)!
+[    0.384022] Please report this to bugzilla.kernel.org,
+[    0.384039] and attach the output of the 'dmesg' command.
+
+[    0.384068] WARNING: CPU#9: NMI appears to be stuck (0->0)!
+[    0.384088] Please report this to bugzilla.kernel.org,
+[    0.384104] and attach the output of the 'dmesg' command.
+
+[    0.384134] WARNING: CPU#10: NMI appears to be stuck (0->0)!
+[    0.384154] Please report this to bugzilla.kernel.org,
+[    0.384171] and attach the output of the 'dmesg' command.
+
+[    0.384200] WARNING: CPU#11: NMI appears to be stuck (0->0)!
+[    0.384220] Please report this to bugzilla.kernel.org,
+[    0.384237] and attach the output of the 'dmesg' command.
+
+[    0.384267] WARNING: CPU#12: NMI appears to be stuck (0->0)!
+[    0.384287] Please report this to bugzilla.kernel.org,
+[    0.384304] and attach the output of the 'dmesg' command.
+
+[    0.384333] WARNING: CPU#13: NMI appears to be stuck (0->0)!
+[    0.384353] Please report this to bugzilla.kernel.org,
+[    0.384370] and attach the output of the 'dmesg' command.
+
+[    0.384399] WARNING: CPU#14: NMI appears to be stuck (0->0)!
+[    0.384419] Please report this to bugzilla.kernel.org,
+[    0.384436] and attach the output of the 'dmesg' command.
+
+[    0.384465] WARNING: CPU#15: NMI appears to be stuck (0->0)!
+[    0.384485] Please report this to bugzilla.kernel.org,
+[    0.384502] and attach the output of the 'dmesg' command.
+[    0.384548] No support for PMU type 'niagara5'
+[    0.385061] ldc.c:v1.1 (July 22, 2008)
+[    0.385461] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.385916] futex hash table entries: 65536 (order: 9, 4194304 bytes, linear)
+[    0.387431] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.389066] VIO: Adding device channel-devices (tx_ino = ffffffffffffffff, rx_ino = ffffffffffffffff)
+[    0.389105] VIO: Adding device vnet-port-0-0 (tx_ino = 0, rx_ino = 1)
+[    0.389135] VIO: Adding device vnet-port-0-1 (tx_ino = 2, rx_ino = 3)
+[    0.389186] VIO: Adding device vnet-port-0-2 (tx_ino = 4, rx_ino = 5)
+[    0.389215] VIO: Adding device vnet-port-0-3 (tx_ino = 6, rx_ino = 7)
+[    0.389243] VIO: Adding device vnet-port-0-4 (tx_ino = 8, rx_ino = 9)
+[    0.389271] VIO: Adding device vdc-port-2-0 (tx_ino = a, rx_ino = b)
+[    0.389305] VIO: Adding device vdc-port-1-0 (tx_ino = c, rx_ino = d)
+[    0.389345] VIO: Adding device vdc-port-0-0 (tx_ino = e, rx_ino = f)
+[    0.389375] VIO: Adding device vlds-port-0-0 (tx_ino = 10, rx_ino = 11)
+[    0.389405] VIO: Adding device domain-services-port-0 (tx_ino = 10, rx_ino = 11)
+[    0.389470] audit: initializing netlink subsys (disabled)
+[    0.389602] audit: type=2000 audit(0.260:1): state=initialized audit_enabled=0 res=1
+[    0.389767] thermal_sys: Registered thermal governor 'fair_share'
+[    0.389771] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.389777] thermal_sys: Registered thermal governor 'step_wise'
+[    0.389782] thermal_sys: Registered thermal governor 'user_space'
+[    0.389786] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.398639] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.398659] HugeTLB registered 8.00 MiB page size, pre-allocated 0 pages
+[    0.398666] HugeTLB registered 256 MiB page size, pre-allocated 0 pages
+[    0.398674] HugeTLB registered 2.00 GiB page size, pre-allocated 0 pages
+[    0.400416] iommu: Default domain type: Translated 
+[    0.400434] iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.401162] NetLabel: Initializing
+[    0.401169] NetLabel:  domain hash size = 128
+[    0.401175] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.401233] NetLabel:  unlabeled traffic allowed by default
+[    0.401339] vgaarb: loaded
+[    0.401581] SUN4V: Reboot data supported (maj=1,min=0).
+[    0.401716] ds.c:v1.0 (Jul 11, 2007)
+[    0.401892] ds-0: ds_conn_reset() from send_events
+[    0.412234] clocksource: Switched to clocksource stick
+[    0.412988] VFS: Disk quotas dquot_6.6.0
+[    0.413105] VFS: Dquot-cache hash table entries: 1024 (order 0, 8192 bytes)
+[    0.413717] AppArmor: AppArmor Filesystem Enabled
+[    0.418160] NET: Registered PF_INET protocol family
+[    0.418552] IP idents hash table entries: 262144 (order: 8, 2097152 bytes, linear)
+[    0.429312] tcp_listen_portaddr_hash hash table entries: 8192 (order: 4, 131072 bytes, linear)
+[    0.429412] Table-perturb hash table entries: 65536 (order: 5, 262144 bytes, linear)
+[    0.429665] TCP established hash table entries: 131072 (order: 7, 1048576 bytes, linear)
+[    0.430139] TCP bind hash table entries: 65536 (order: 7, 1048576 bytes, linear)
+[    0.430411] TCP: Hash tables configured (established 131072 bind 65536)
+[    0.431706] MPTCP token hash table entries: 16384 (order: 5, 393216 bytes, linear)
+[    0.431902] UDP hash table entries: 8192 (order: 5, 262144 bytes, linear)
+[    0.432051] UDP-Lite hash table entries: 8192 (order: 5, 262144 bytes, linear)
+[    0.433132] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.433151] NET: Registered PF_XDP protocol family
+[    0.433167] PCI: CLS 0 bytes, default 64
+[    0.433533] Trying to unpack rootfs image as initramfs...
+[    0.443908] Initialise system trusted keyrings
+[    0.443986] Key type blacklist registered
+[    0.444342] workingset: timestamp_bits=46 max_order=21 bucket_order=0
+[    0.448974] zbud: loaded
+[    0.449727] integrity: Platform Keyring initialized
+[    0.449739] Key type asymmetric registered
+[    0.449747] Asymmetric key parser 'x509' registered
+[    0.688285] Freeing initrd memory: 16672K
+[    0.697729] alg: self-tests for CTR-KDF (hmac(sha256)) passed
+[    0.697816] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+[    0.698101] io scheduler mq-deadline registered
+[    0.700688] f029b788: ttyHV0 at I/O 0x0 (irq = 1, base_baud = 115200) is a SUN4V HCONS
+[    0.701085] printk: console [ttyHV0] enabled
+[    0.702029] mousedev: PS/2 mouse device common for all mice
+[    0.702344] rtc-sun4v rtc-sun4v: registered as rtc0
+[    0.702372] rtc-sun4v rtc-sun4v: setting system clock to 2022-09-12T11:30:04 UTC (1662982204)
+[    0.702890] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.703654] NET: Registered PF_INET6 protocol family
+[    0.716164] Segment Routing with IPv6
+[    0.716228] In-situ OAM (IOAM) with IPv6
+[    0.716281] mip6: Mobile IPv6
+[    0.716290] NET: Registered PF_PACKET protocol family
+[    0.716361] mpls_gso: MPLS GSO support
+[    0.717353] registered taskstats version 1
+[    0.717382] Loading compiled-in X.509 certificates
+[    1.154001] Loaded X.509 cert 'Debian Secure Boot CA: 6ccece7e4c6c0d1f6149f3dd27dfcc5cbb419ea1'
+[    1.154076] Loaded X.509 cert 'Debian Secure Boot Signer 2022 - linux: 14011249c2675ea8e5148542202005810584b25f'
+[    1.174822] zswap: loaded using pool lzo/zbud
+[    1.175406] Key type ._fscrypt registered
+[    1.175415] Key type .fscrypt registered
+[    1.175421] Key type fscrypt-provisioning registered
+[    1.183707] Key type encrypted registered
+[    1.183725] AppArmor: AppArmor sha1 policy hashing enabled
+[    1.183746] ima: No TPM chip found, activating TPM-bypass!
+[    1.183765] ima: Allocated hash algorithm: sha256
+[    1.183795] ima: No architecture policies found
+[    1.183827] evm: Initialising EVM extended attributes:
+[    1.183833] evm: security.selinux
+[    1.183839] evm: security.SMACK64 (disabled)
+[    1.183845] evm: security.SMACK64EXEC (disabled)
+[    1.183851] evm: security.SMACK64TRANSMUTE (disabled)
+[    1.183856] evm: security.SMACK64MMAP (disabled)
+[    1.183862] evm: security.apparmor
+[    1.183867] evm: security.ima
+[    1.183872] evm: security.capability
+[    1.183878] evm: HMAC attrs: 0x1
+[    1.347623] This architecture does not have kernel memory protection.
+[    1.347651] Run /init as init process
+[    1.347657]   with arguments:
+[    1.347662]     /init
+[    1.347665]   with environment:
+[    1.347668]     HOME=/
+[    1.347671]     TERM=linux
+[    1.347674]     BOOT_IMAGE=/vmlinux-5.19.0-1-sparc64-smp
+[    1.607805] sunvdc.c:v1.2 (November 24, 2014)
+[    1.610262] sunvnet: sunvnet 2.0 (February 3, 2017)
+[    1.611637] vnet_port vnet-port-0-0 eth0: Sun LDOM vnet 00:14:4f:f8:12:a3
+[    1.611746] sunvnet: eth0: PORT ( remote-mac 00:14:4f:fa:f3:f0 switch-port )
+[    1.611838] sunvdc: Virtual Hard disk vdiskc
+[    1.611851] sunvdc: vdiskc: 104857600 sectors (51200 MB) protocol 1.2
+[    1.611943] sunvnet: eth0: PORT ( remote-mac 00:14:4f:f9:b4:97 )
+[    1.612136] sunvnet: eth0: PORT ( remote-mac 00:14:4f:f9:8b:83 )
+[    1.612317] sunvnet: eth0: PORT ( remote-mac 00:14:4f:f8:3f:1e )
+[    1.612538] sunvnet: eth0: PORT ( remote-mac 00:14:4f:f8:e5:f3 )
+[    1.618846] crc32c_sparc64: Using sparc64 crc32c opcode optimized CRC32C implementation
+[    1.623506] sunvdc: Virtual Hard disk vdiskb
+[    1.623525] sunvdc: vdiskb: 62914560 sectors (30720 MB) protocol 1.2
+[    1.630800]  vdiskb: vdiskb1
+[    1.634405] sunvdc: Virtual Hard disk vdiska
+[    1.634430] sunvdc: vdiska: 31457280 sectors (15360 MB) protocol 1.2
+[    1.641450]  vdiska: vdiska1 vdiska2 vdiska3 vdiska4
+[    3.688201] random: crng init done
+[    3.787125] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    3.787238] device-mapper: uevent: version 1.0.3
+[    3.787402] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[    4.005398] xor: automatically using best checksumming function   Niagara   
+[    4.072212] raid6: int64x8  gen()  2157 MB/s
+[    4.140184] raid6: int64x4  gen()  3391 MB/s
+[    4.208195] raid6: int64x2  gen()  3345 MB/s
+[    4.276192] raid6: int64x1  gen()  1574 MB/s
+[    4.276215] raid6: using algorithm int64x4 gen() 3391 MB/s
+[    4.344187] raid6: .... xor() 1476 MB/s, rmw enabled
+[    4.344214] raid6: using intx1 recovery algorithm
+[    4.503662] EXT4-fs (vdiska2): mounted filesystem with ordered data mode. Quota mode: none.
+[    4.545835] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.
+[    5.826312] systemd[1]: Inserted module 'autofs4'
+[    5.979070] systemd[1]: systemd 251.4-3 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK -SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY -P11KIT -QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[    5.979121] systemd[1]: Detected architecture sparc64.
+[    6.008511] systemd[1]: Hostname set to <ttip>.
+[    7.840775] systemd[1]: Queued start job for default target Multi-User System.
+[    7.847616] systemd[1]: Created slice Slice /system/getty.
+[    7.852422] systemd[1]: Created slice Slice /system/modprobe.
+[    7.855925] systemd[1]: Created slice Slice /system/openvpn-client.
+[    7.859103] systemd[1]: Created slice Slice /system/postfix.
+[    7.862339] systemd[1]: Created slice Slice /system/systemd-fsck.
+[    7.865373] systemd[1]: Created slice User and Session Slice.
+[    7.865699] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    7.865952] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    7.867136] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    7.867379] systemd[1]: Reached target Local Encrypted Volumes.
+[    7.867523] systemd[1]: Reached target Local Integrity Protected Volumes.
+[    7.867729] systemd[1]: Reached target Path Units.
+[    7.867904] systemd[1]: Reached target Slice Units.
+[    7.868075] systemd[1]: Reached target System Time Set.
+[    7.868293] systemd[1]: Reached target Local Verity Protected Volumes.
+[    7.868596] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[    7.869010] systemd[1]: Listening on LVM2 poll daemon socket.
+[    7.879748] systemd[1]: Listening on RPCbind Server Activation Socket.
+[    7.880612] systemd[1]: Listening on Syslog Socket.
+[    7.881016] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    7.881264] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    7.881850] systemd[1]: Listening on Journal Audit Socket.
+[    7.882201] systemd[1]: Listening on Journal Socket (/dev/log).
+[    7.882648] systemd[1]: Listening on Journal Socket.
+[    7.883247] systemd[1]: Listening on udev Control Socket.
+[    7.883589] systemd[1]: Listening on udev Kernel Socket.
+[    7.888270] systemd[1]: Mounting Huge Pages File System...
+[    7.892876] systemd[1]: Mounting POSIX Message Queue File System...
+[    7.899160] systemd[1]: Mounting RPC Pipe File System...
+[    7.903797] systemd[1]: Mounting Kernel Debug File System...
+[    7.908505] systemd[1]: Mounting Kernel Trace File System...
+[    7.908868] systemd[1]: Kernel Module supporting RPCSEC_GSS was skipped because of a failed condition check (ConditionPathExists=/etc/krb5.keytab).
+[    7.909190] systemd[1]: Finished Availability of block devices.
+[    7.914604] systemd[1]: Starting Wait for network to be configured by ifupdown...
+[    7.919575] systemd[1]: Starting Create List of Static Device Nodes...
+[    7.924420] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    7.931666] systemd[1]: Starting Load Kernel Module configfs...
+[    7.939315] systemd[1]: Starting Load Kernel Module drm...
+[    7.944867] systemd[1]: Starting Load Kernel Module fuse...
+[    7.950121] systemd[1]: Starting nftables...
+[    7.950787] systemd[1]: File System Check on Root Device was skipped because of a failed condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+[    7.958553] systemd[1]: Starting Journal Service...
+[    7.981265] systemd[1]: Starting Load Kernel Modules...
+[    7.986464] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    7.986859] systemd[1]: Repartition Root Disk was skipped because all trigger condition checks failed.
+[    7.991717] systemd[1]: Starting Coldplug All udev Devices...
+[    7.996629] systemd[1]: Mounted Huge Pages File System.
+[    7.997113] systemd[1]: Mounted POSIX Message Queue File System.
+[    7.997438] systemd[1]: Mounted Kernel Debug File System.
+[    7.997754] systemd[1]: Mounted Kernel Trace File System.
+[    7.998650] systemd[1]: Finished Wait for network to be configured by ifupdown.
+[    7.999608] systemd[1]: Finished Create List of Static Device Nodes.
+[    8.000469] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[    8.001042] systemd[1]: Finished Load Kernel Module configfs.
+[    8.006342] systemd[1]: Mounting Kernel Configuration File System...
+[    8.012462] systemd[1]: Mounted Kernel Configuration File System.
+[    8.081755] fuse: init (API version 7.36)
+[    8.084522] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[    8.085204] systemd[1]: Finished Load Kernel Module fuse.
+[    8.090450] systemd[1]: Mounting FUSE Control File System...
+[    8.097232] systemd[1]: Mounted FUSE Control File System.
+[    8.123785] RPC: Registered named UNIX socket transport module.
+[    8.123813] RPC: Registered udp transport module.
+[    8.123822] RPC: Registered tcp transport module.
+[    8.123830] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    8.128357] systemd[1]: Mounted RPC Pipe File System.
+[    8.128510] EXT4-fs (vdiska2): re-mounted. Quota mode: none.
+[    8.133651] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    8.191500] systemd[1]: Starting Initial Check File System Quotas...
+[    8.191909] systemd[1]: Platform Persistent Storage Archival was skipped because of a failed condition check (ConditionDirectoryNotEmpty=/sys/fs/pstore).
+[    8.197268] systemd[1]: Starting Load/Save Random Seed...
+[    8.203110] systemd[1]: Starting Create System Users...
+[    8.204879] systemd[1]: Finished Load Kernel Modules.
+[    8.210201] systemd[1]: Starting Apply Kernel Variables...
+[    8.211467] systemd[1]: Started Journal Service.
+[    8.304829] systemd-journald[338]: Received client request to flush runtime journal.
+[    9.843980] sha1_sparc64: Using sparc64 sha1 opcode optimized SHA-1 implementation
+[    9.863037] sha256_sparc64: Using sparc64 sha256 opcode optimized SHA-256/SHA-224 implementation
+[    9.864351] n2rng v0.3 (Jan 7, 2017)
+[    9.864377] n2rng f029b104: Registered RNG HVAPI major 2 minor 0
+[    9.864391] n2rng f029b104: Found multi-unit-capable RNG, units: 2
+[    9.864763] sha512_sparc64: Using sparc64 sha512 opcode optimized SHA-512/SHA-384 implementation
+[    9.864790] n2rng f029b104: RNG ready
+[    9.876522] md5_sparc64: Using sparc64 md5 opcode optimized MD5 implementation
+[    9.900549] aes_sparc64: Using sparc64 aes opcodes optimized AES implementation
+[    9.954451] des_sparc64: Using sparc64 des opcodes optimized DES implementation
+[    9.961473] camellia_sparc64: Using sparc64 camellia opcodes optimized CAMELLIA implementation
+[   10.254406] SGI XFS with ACLs, security attributes, realtime, quota, no debug enabled
+[   10.266224] XFS (dm-0): Mounting V5 Filesystem
+[   10.271185] Adding 787176k swap on /dev/vdiska4.  Priority:-2 extents:1 across:787176k FS
+[   10.311766] XFS (dm-0): Ending clean mount
+[   10.313229] xfs filesystem being mounted at /1 supports timestamps until 2038 (0x7fffffff)
+[   10.655868] EXT4-fs (vdiska1): mounting ext3 file system using the ext4 subsystem
+[   11.007556] EXT4-fs (vdiska1): mounted filesystem with ordered data mode. Quota mode: none.
+[   11.007748] ext3 filesystem being mounted at /boot supports timestamps until 2038 (0x7fffffff)
+[   12.054586] audit: type=1400 audit(1662982215.848:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/haveged" pid=497 comm="apparmor_parser"
+[   12.086138] audit: type=1400 audit(1662982215.880:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=494 comm="apparmor_parser"
+[   12.087705] audit: type=1400 audit(1662982215.880:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=494 comm="apparmor_parser"
+[   12.090502] audit: type=1400 audit(1662982215.884:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=494 comm="apparmor_parser"
+[   12.134071] audit: type=1400 audit(1662982215.928:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=493 comm="apparmor_parser"
+[   12.138451] audit: type=1400 audit(1662982215.932:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=493 comm="apparmor_parser"
+[   12.175676] audit: type=1400 audit(1662982215.968:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/chronyd" pid=496 comm="apparmor_parser"
+[   12.188821] audit: type=1400 audit(1662982215.984:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=492 comm="apparmor_parser"
+[   12.359110] audit: type=1400 audit(1662982216.152:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="named" pid=499 comm="apparmor_parser"
+[   12.423474] audit: type=1400 audit(1662982216.216:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="tcpdump" pid=495 comm="apparmor_parser"
